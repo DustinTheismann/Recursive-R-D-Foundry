@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "rsi-foundry"
+version = "0.2.0"
+description = "Recursive R&D Foundry — a governed recursive self-improvement lab that evolves, sandboxes, proves, and promotes real successor programs under assurance-bounded gates."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "DustinTheismann" }]
+dependencies = [
+    "PyYAML>=6.0",
+]
+
+[project.optional-dependencies]
+# Real backends activate automatically when present. The foundry is fully
+# functional with zero optional dependencies (deterministic mutation proposer,
+# subprocess containment).
+llm = ["anthropic>=0.40"]
+dev = ["pytest>=7.0"]
+
+[project.scripts]
+rsi-foundry = "rsi_foundry.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["rsi_foundry*"]
+
+[tool.pytest.ini_options]
+addopts = "-q"
+testpaths = ["tests"]
