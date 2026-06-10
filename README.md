@@ -69,8 +69,11 @@ python -m rsi_foundry.cli dashboard runpacks/session.runpack.yaml -o dashboard.h
 # smallest complete demonstration
 python examples/run_minimal_cycle.py
 
-# tests
-pytest -q                    # 30 passing
+# the legible gate demonstration: honest -> PROMOTED, goodhart -> REFUTED
+python -m gate_demo
+
+# tests (internal gates + FEK governance + ported gate-demo falsification)
+pytest -q
 ```
 
 ## The loop, mapped to the research
@@ -170,8 +173,24 @@ network:
 
 ```bash
 pip install pytest          # the only thing not vendored
-make verify                 # internal tests + ported falsification suite + overclaim scan
+make verify                 # tests + governed demo + gate demo + overclaim scan
 ```
+
+`make verify` witnesses **both halves of the gate**, cold, two independent ways
+— because a gate only ever seen to refuse is indistinguishable from one stuck
+shut:
+
+- `make demo` runs the real governed orchestrator (8 cycles, seed 7) and
+  asserts it both **shuts** (refutations structurally block promotion: ~85
+  refuted) and **opens** (honest improvements clear `E4_REPRODUCED` and are
+  promoted: 3 accepted). It exits non-zero if either half is missing.
+- `make demo-gate` runs the deterministic gate demonstration
+  ([`gate_demo/`](gate_demo)): an honest candidate is **PROMOTED** at
+  `E4_REPRODUCED`, a memorizing (Goodhart) candidate that aces the public
+  benchmark 5/5 is **REFUTED** when the held-out probe catches it 5/25, and its
+  overfit trait is quarantined. Falsification conditions F1–F5 are stated in
+  [`SPEC.md`](SPEC.md); the trait-contamination threat model is
+  [`THREAT_MODEL.md`](THREAT_MODEL.md).
 
 The ported falsification suite (`tests/test_evidence_gate.py`, PF1–PF5) proves
 the veto's added value: a self-attested-only successor is **not** promoted; a
@@ -193,6 +212,11 @@ rsi_foundry/
 ├── evals/         evaluator quorum
 ├── connectors/    benchmark adapters (local + SWE/MLE stubs)
 └── dashboard/     dependency-free HTML+SVG report
+
+gate_demo/        legible both-halves gate demonstration (honest→PROMOTED, goodhart→REFUTED)
+vendor/fek/       pinned, verbatim evidence kernel (governance runs cold)
+SPEC.md           gate falsification conditions F1–F5
+THREAT_MODEL.md   trait-extraction contamination channel (T1–T6)
 ```
 
 See [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md) for the full design.

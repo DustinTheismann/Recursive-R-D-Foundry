@@ -5,27 +5,26 @@ PY ?= python3
 export PYTHONPATH := .:vendor
 
 .DEFAULT_GOAL := help
-.PHONY: help test demo audit verify clean
+.PHONY: help test demo demo-gate audit verify clean
 
 help: ## show this help
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | \
-		awk 'BEGIN{FS=":.*?## "}{printf "  \033[36m%-8s\033[0m %s\n", $$1, $$2}'
+		awk 'BEGIN{FS=":.*?## "}{printf "  \033[36m%-9s\033[0m %s\n", $$1, $$2}'
 
-test: ## full suite: internal gates + ported FEK falsification suite (cold)
+test: ## full suite: internal gates + FEK falsification + ported gate-demo (cold)
 	$(PY) -m pytest
 
-demo: ## run a short governed cycle and print the FEK governance summary
-	$(PY) -c "from rsi_foundry.core.orchestrator import Foundry; \
-f=Foundry({'cycles':3,'seed':7}); f.run(); s=f.evidence_gate.state(); \
-print('claims',len(s['claims']),'refuted',sum(1 for c in s['claims'].values() if c['status']=='refuted'),\
-'promoted',sum(1 for c in s['claims'].values() if c['status']=='accepted'),\
-'events',sum(s['event_counts'].values()))"
+demo: ## governed orchestrator run; asserts the gate BOTH opens and shuts
+	$(PY) scripts/governed_demo.py
+
+demo-gate: ## deterministic gate demonstration (honest->PROMOTED, goodhart->REFUTED)
+	$(PY) -m gate_demo
 
 audit: ## run the vendored kernel's overclaim scanner on this repo's prose
 	$(PY) -m fek --root . scan-overclaims
 
-verify: test demo audit ## the full cold-reproducible gate
-	@echo "verify: OK (test + demo + audit, all cold)"
+verify: test demo demo-gate audit ## full cold gate: both halves witnessed two ways
+	@echo "verify: OK (test + governed demo + gate demo + audit, all cold)"
 
 clean: ## remove caches
 	find . -type d -name __pycache__ -prune -exec rm -rf {} + 2>/dev/null || true
