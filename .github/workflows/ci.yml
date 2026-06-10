@@ -1,0 +1,27 @@
+name: ci
+on: [push, pull_request]
+jobs:
+  falsify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          path: Recursive-R-D-Foundry
+      - uses: actions/checkout@v4
+        with:
+          repository: DustinTheismann/fractal-evidence-kernel
+          # Repin to main once the kernel's release branch merges.
+          ref: claude/fractal-evidence-kernel-TdJGs
+          path: fractal-evidence-kernel
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.11" }
+      - run: pip install PyYAML pytest
+      - name: falsification suite
+        working-directory: Recursive-R-D-Foundry
+        run: make test
+      - name: falsification run (the demo)
+        working-directory: Recursive-R-D-Foundry
+        run: make demo
+      - name: overclaim scan (dogfooding the kernel's scanner)
+        working-directory: Recursive-R-D-Foundry
+        run: make audit

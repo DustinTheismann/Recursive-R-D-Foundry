@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "recursive-rd-foundry"
+version = "0.1.0"
+description = "Governed successor-selection loop: evidence-gated promotion, refutation supremacy, quarantined failure traits."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { file = "LICENSE" }
+authors = [{ name = "DustinTheismann" }]
+dependencies = [
+  # The gate. Pinned to the development branch; repin to a release tag
+  # (e.g. @v0.2.0) once fractal-evidence-kernel merges to main.
+  "fractal-evidence-kernel @ git+https://github.com/DustinTheismann/fractal-evidence-kernel.git@claude/fractal-evidence-kernel-TdJGs",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7.0"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+pythonpath = ["src"]
