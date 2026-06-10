@@ -1,10 +1,18 @@
 # Recursive R&D Foundry
 
-**A governed recursive self-improvement lab.** The foundry generates successor
-*programs*, sandboxes them, benchmarks them, proves contracts, gathers causal
+**A governed successor-evolution lab.** The foundry generates successor
+*programs*, sandboxes them, benchmarks them, checks contracts, gathers causal
 evidence, mines failures into training signal, archives diversity, and promotes
-only candidates that clear **novelty, causal, benchmark, containment, and
-HALF-LIFE assurance gates**.
+only candidates that clear its internal gates **and** an external evidence gate
+(the fractal-evidence-kernel) enforcing producer≠verifier, refutation supremacy,
+and no self-promotion on an append-only log.
+
+> **Status / honesty note.** "Recursive self-improvement", an "assurance bound",
+> and "proof" are **not** claimed as achieved. The internal HALF-LIFE controller
+> is a heuristic throttle, not a guaranteed bound; "causal" here means
+> interventional ablation evidence, not a formal causal proof. What is live and externally
+> checkable is the *governance* — see **Governance (evidence-gated)** below, and
+> reproduce it cold yourself.
 
 The viable path to recursive self-improvement is not *“one AI mutates itself
 freely.”* It is a **recursive AI R&D factory**:
@@ -92,8 +100,8 @@ the verification layer, and the governance layer at the same time**:
   improve; new environments are admitted only under a minimal-criterion band.
 - **Failure-mined self-training (SEAL)** — governance becomes a *training
   signal*, not just a blocker.
-- **Best Attribute Registry** — harvest proven genes from *losing* candidates and
-  graft them across lineages (recursive capability fusion).
+- **Best Attribute Registry** — harvest high-performing genes from *losing*
+  candidates and graft them across lineages (recursive capability fusion).
 - **Causal gate** — promotion requires interventional ablation evidence that the
   gain is mechanistically real, plus per-task consistency vs. the parent.
 - **Proof-carrying contracts** — candidates must satisfy machine-checkable
@@ -101,7 +109,8 @@ the verification layer, and the governance layer at the same time**:
 - **HALF-LIFE assurance-debt ledger** — capability may only expand as fast as
   assurance is minted; states **GREEN → AMBER → RED → BLACK** throttle or halt.
 - **Meta-gate (recursive governance)** — the gates themselves are improvable, but
-  *monotone-safe*: tighten freely; loosen only when assurance has been earned.
+  *monotone by construction*: tighten freely; loosen only when assurance has been
+  earned.
 
 ## Promotion rule
 
@@ -116,6 +125,58 @@ regression_failures == 0
 capability_drift  <=  assurance_renewal × safety_factor      (HALF-LIFE)
 lineage_hash recorded                 (content-addressed Merkle DAG)
 ```
+
+...**and then it must clear the external evidence gate below.** The rule above
+is the foundry judging itself. The next section is the part that does not take
+the foundry's word for it.
+
+## Governance (evidence-gated)
+
+Every internal decision above is *self-attested*: the foundry computes its own
+`promoted` flag. That is exactly the failure mode the
+[`fractal-evidence-kernel`](https://github.com/DustinTheismann/fractal-evidence-kernel)
+(FEK) refuses. v0.2 now routes every promotion through FEK as a **supervening
+veto** (`rsi_foundry/governance/evidence_gate.py`):
+
+```
+governed_promoted = internal_gates_pass  AND  fek_gate_pass
+```
+
+FEK can never promote what the internal gates rejected; it can refuse what they
+accepted. What it adds, that the internal gate had no notion of:
+
+- **Producer ≠ verifier.** A self-run benchmark is at most a self-attested
+  `E3_EXECUTABLE` record and can never satisfy promotion alone. Only the
+  ablation study, run by a separate harness identity, yields an independently
+  corroborated `E4_REPRODUCED` record.
+- **Refutation supremacy.** A per-task regression, a containment breach, or an
+  ablation showing no real effect becomes a first-class refutation that
+  collapses the claim to `EX_REFUTED` — promotion forbidden regardless of every
+  other gate.
+- **No self-promotion.** The claim is tagged `producer_role: foundry`; the
+  promotion transition must be proposed by an independent review identity.
+- **Append-only, hash-chained evidence.** Every decision is replayable from the
+  kernel's event logs, not asserted in prose.
+
+Honest limit: producer and verifier are honest *labels* within one trusted
+process; cryptographic identity for evidence records is a spec_only interface,
+not a claim made here.
+
+## Reproduce cold
+
+The evidence kernel is **vendored** under [`vendor/fek`](vendor/README.md) at a
+pinned commit, so governance runs with no external clone, no token, and no
+network:
+
+```bash
+pip install pytest          # the only thing not vendored
+make verify                 # internal tests + ported falsification suite + overclaim scan
+```
+
+The ported falsification suite (`tests/test_evidence_gate.py`, PF1–PF5) proves
+the veto's added value: a self-attested-only successor is **not** promoted; a
+regression or breach **refutes**; the foundry **cannot** self-promote; and FEK
+**never** promotes what the internal gate rejected.
 
 ## Layout
 

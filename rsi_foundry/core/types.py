@@ -73,6 +73,13 @@ class GateReport:
     promoted: bool = False
     lineage_hash: str = ""
     reasons: list[str] = field(default_factory=list)
+    # Evidence-kernel governance (FEK): a supervening veto over `promoted`.
+    # See rsi_foundry/governance/evidence_gate.py.
+    fek_promoted: bool = False
+    fek_grade: str = ""
+    fek_claim_id: str = ""
+    fek_refutation_id: Optional[str] = None
+    fek_denials: list[str] = field(default_factory=list)
 
     def to_dict(self) -> dict[str, Any]:
         return asdict(self)

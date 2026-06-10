@@ -116,6 +116,17 @@ class Foundry:
         self.policy = PromotionPolicy()
         self.half_life = HalfLifeController(safety_factor=self.config["safety_factor"])
         self.meta_gate = MetaGate(self.policy, self.half_life)
+        # Evidence-kernel governance (FEK): a supervening veto over the internal
+        # gate. Promotion now also requires externally-checkable evidence
+        # (producer != verifier, refutation supremacy, no foundry self-promotion),
+        # recorded on an append-only, hash-chained log.
+        import tempfile
+
+        from fek.kernel import Kernel
+        from rsi_foundry.governance.evidence_gate import EvidenceGate
+
+        gov_root = self.config.get("governance_root") or tempfile.mkdtemp(prefix="rsi-gov-")
+        self.evidence_gate = EvidenceGate(Kernel(gov_root))
 
         # bookkeeping
         self.registry = SuccessorRegistry()
@@ -241,6 +252,10 @@ class Foundry:
             report = promotion.evaluate(
                 cand, res, self.registry.champion_result(), parent_res,
                 novelty_score, causal, self.half_life, self.policy, cand.cid)
+            # Supervening evidence-kernel veto: files the report as a claim with
+            # evidence/refutations and re-decides promotion under FEK policy.
+            # `report.promoted` becomes (v0.2 gate) AND (FEK gate).
+            report = self.evidence_gate.govern(cand, res, report)
             rec.gate_reports.append(report.to_dict())
 
             # SEAL: every candidate (esp. failures) becomes training signal

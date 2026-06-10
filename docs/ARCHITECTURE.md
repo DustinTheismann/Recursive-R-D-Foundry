@@ -81,7 +81,7 @@ contracts pass · contained · benchmark pass · `fitness_delta > min` ·
 HALF-LIFE allows · lineage hash recorded.
 
 **Meta-gate (recursive governance).** The thresholds are themselves an
-improvable lineage — but *monotone-safe*: tightening is always allowed; loosening
+improvable lineage — but *monotone by construction*: tightening is always allowed; loosening
 is allowed **only** when cumulative assurance has grown by a margin since the last
 loosening. The governor may never relax faster than assurance accrues.
 
@@ -95,7 +95,7 @@ loosening. The governor may never relax faster than assurance accrues.
   single winner, giving diverse non-collapsing parents.
 * **Novelty ledger** — behavioral novelty + occupancy-entropy anti-collapse: if
   diversity falls, novelty pressure rises.
-* **Best Attribute Registry** — harvests proven gene values from losing
+* **Best Attribute Registry** — harvests high-performing gene values from losing
   candidates and grafts them across lineages (recursive capability fusion).
 * **POET** — coevolves the benchmark: harder environments are admitted only if
   the champion scores inside a minimal-criterion band.
