@@ -105,5 +105,19 @@ benchmark is one toy task. Scaling the attacker set is the v0.2 work item.
 Nothing in this repo ships without a stated falsification condition: the gate's
 are §4; the benchmark's hackability and the probe's catch are
 `tests/test_benchmark.py`; trait extraction's containment condition is F3.
-Prose claims in this repo are checked against FEK's overclaim scanner in CI
-(`make audit`).
+Prose claims in this repo are checked against the kernel's overclaim scanner in
+CI (`make audit`).
+
+### 6.1 External reproducibility (non-negotiable for this project)
+
+A project whose thesis is that self-reported verification does not count cannot
+report self-attested results behind an unresolvable dependency. Therefore the
+evidence kernel is **vendored** under `vendor/fek` at a pinned commit
+(`vendor/README.md`), and `make verify` (test + demo + audit) runs with no
+external clone, no token, and no network — only the standard library plus
+`pytest`. The exercised gate path imports no third-party package at all.
+
+Falsification of *this* property: if `make verify` cannot be run from a fresh
+clone of this repository alone, the reproducibility claim is broken and must be
+treated as such — exactly as the gate would treat any claim lacking independent
+evidence.

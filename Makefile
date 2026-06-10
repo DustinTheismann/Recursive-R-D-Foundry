@@ -1,12 +1,11 @@
-# Recursive R&D Foundry -- the demo IS the falsification run.
+# Recursive R&D Foundry -- runs COLD: the evidence kernel is vendored under
+# vendor/fek, so `make test && make demo && make audit` need no external repo,
+# no PAT, and no network. The demo IS the falsification run.
 PY ?= python3
-# Use a sibling fractal-evidence-kernel checkout when present (dev/CI layout);
-# otherwise rely on an installed package.
-FEK_SIBLING := $(abspath ../fractal-evidence-kernel/src)
-export PYTHONPATH := src:$(if $(wildcard $(FEK_SIBLING)),$(FEK_SIBLING),)
+export PYTHONPATH := src:vendor
 
 .DEFAULT_GOAL := help
-.PHONY: help demo falsify test audit clean
+.PHONY: help demo falsify test audit verify clean
 
 help: ## show this help
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | \
@@ -17,11 +16,14 @@ demo: ## run the loop; exits non-zero if any falsification condition trips
 
 falsify: demo ## alias: the demo is the falsification attempt
 
-test: ## run the falsification suite
+test: ## run the falsification suite (vendored kernel; no external deps)
 	$(PY) -m pytest
 
-audit: ## run fractal-evidence-kernel's overclaim scanner on this repo's prose
+audit: ## run the vendored kernel's overclaim scanner on this repo's prose
 	$(PY) -m fek --root . scan-overclaims
+
+verify: test demo audit ## the full cold-reproducible gate
+	@echo "verify: OK (test + demo + audit, all cold)"
 
 clean: ## remove caches
 	find . -type d -name __pycache__ -prune -exec rm -rf {} + 2>/dev/null || true

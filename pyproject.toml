@@ -10,19 +10,19 @@ readme = "README.md"
 requires-python = ">=3.11"
 license = { file = "LICENSE" }
 authors = [{ name = "DustinTheismann" }]
-dependencies = [
-  # The gate. Pinned to the development branch; repin to a release tag
-  # (e.g. @v0.2.0) once fractal-evidence-kernel merges to main.
-  "fractal-evidence-kernel @ git+https://github.com/DustinTheismann/fractal-evidence-kernel.git@claude/fractal-evidence-kernel-TdJGs",
-]
+# Zero third-party RUNTIME dependencies: the evidence kernel is vendored under
+# vendor/fek (see vendor/README.md) so this repo runs cold. PyYAML is optional
+# and only needed if YAML registries/source-maps are added (none are here).
+dependencies = []
 
 [project.optional-dependencies]
 dev = ["pytest>=7.0"]
 
 [tool.setuptools.packages.find]
-where = ["src"]
+where = ["src", "vendor"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 addopts = "-q"
-pythonpath = ["src"]
+# The vendored kernel resolves `import fek` with no install and no sibling clone.
+pythonpath = ["src", "vendor"]

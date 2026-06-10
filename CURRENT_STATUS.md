@@ -2,7 +2,11 @@
 
 ## Live (wired and exercised by the falsification suite)
 
-- Promotion gate wiring on fractal-evidence-kernel: evidence floor (E4),
+- **Cold-reproducible:** the evidence kernel is vendored under `vendor/fek` at a
+  pinned commit, so `make verify` (test + demo + audit) runs from a fresh clone
+  with no external dependency, token, or network. Results are replayable, not
+  self-attested.
+- Promotion gate wiring on the vendored evidence kernel: evidence floor (E4),
   independent-verifier requirement, refutation supremacy, no foundry
   self-promotion (SPEC.md G1–G4).
 - Deliberately hackable public benchmark + deterministic held-out probe.

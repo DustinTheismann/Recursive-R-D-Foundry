@@ -6,9 +6,11 @@ quarantined by default.**
 
 **Status:** v0.1.0 · the *gate* is live and falsifiable; successor *generation*
 is spec_only (planned) — the gate must survive attack before any generator is
-attached. Built on
-[`fractal-evidence-kernel`](https://github.com/DustinTheismann/fractal-evidence-kernel)
-rather than restating it.
+attached. The evidence kernel
+([`fractal-evidence-kernel`](https://github.com/DustinTheismann/fractal-evidence-kernel))
+is **vendored** under [`vendor/fek`](vendor/README.md) at a pinned commit, so the
+results below are reproducible cold by anyone — no external clone, no token, no
+network. They are replayable, not self-attested.
 
 ## The one result this repo exists to show
 
@@ -32,15 +34,18 @@ which becomes a first-class refutation; the grade collapses to `EX_REFUTED`
 and promotion is structurally impossible. The honest candidate promotes, which
 matters just as much: a gate that refuses everything is vacuous, not strict.
 
-Run it yourself:
+Reproduce it cold — no external dependency, no network, no private repo:
 
 ```bash
-make demo        # or: make falsify -- same run, named for what it is
-make test
+git clone <this repo> && cd Recursive-R-D-Foundry
+pip install pytest            # the only thing not vendored
+make verify                   # = test + demo + audit, all from vendor/fek
 ```
 
-A green run means the gate survived this falsification attempt, nothing more.
-The falsification conditions (F1–F5) are stated in
+The evidence kernel is vendored verbatim under [`vendor/fek`](vendor/README.md)
+(the pinned upstream commit is recorded there), so the table above is replayable
+by anyone rather than self-attested. A green run means the gate survived this
+falsification attempt, nothing more. The falsification conditions (F1–F5) are in
 [`SPEC.md`](SPEC.md) §4 and execute on every CI push.
 
 ## How it works
@@ -87,6 +92,7 @@ SPEC.md            formal gate (G1–G4) + falsification conditions (F1–F5)
 THREAT_MODEL.md    trait-extraction contamination channel (T1–T6)
 CURRENT_STATUS.md  live / experimental / spec_only split
 src/foundry/       benchmark, agents, gate wiring, traits, loop
+vendor/fek/        pinned, verbatim copy of the evidence kernel (runs cold)
 tests/             the falsification suite
 ```
 
