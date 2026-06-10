@@ -1,0 +1,40 @@
+# Recursive R&D Foundry — run + governance policy.
+# Passed to `rsi-foundry run --config configs/policy.yaml`.
+# Every field is optional; omitted fields fall back to rsi_foundry.core.orchestrator.DEFAULTS.
+
+seed: 1234
+cycles: 8
+
+# --- evaluation ecology -------------------------------------------------------
+per_env_instances: 3          # held-out instances per POET environment
+benchmark_floor: 0.50         # minimum fitness for the benchmark quorum vote
+
+# --- quality-diversity & anti-collapse ---------------------------------------
+qd_grid: 8                    # MAP-Elites resolution per behavior dimension
+novelty_k: 5                  # k for behavioral novelty (k-NN in behavior space)
+entropy_floor: 0.45          # below this diversity, raise novelty pressure
+novelty_pressure: 0.15       # novelty threshold applied under anti-collapse
+
+# --- loops --------------------------------------------------------------------
+scientist_every: 2           # run the AI-Scientist ablation loop every N cycles
+offspring:
+  alphaevolve: 6
+  dgm: 3
+  adas: 3
+
+# --- HALF-LIFE assurance control plane ---------------------------------------
+# capability may expand only as fast as assurance can absorb it.
+safety_factor: 2.0           # required_credit = capability_drift / safety_factor
+assurance_per_check: 0.004   # assurance minted per contained+valid candidate
+assurance_per_coverage: 0.40 # assurance minted per unit of new QD coverage
+
+# --- containment --------------------------------------------------------------
+containment:
+  cpu_seconds: 2             # per-candidate CPU rlimit (subprocess backend)
+  mem_mb: 256                # address-space rlimit
+  wall_timeout: 8.0          # wall-clock kill switch
+
+# --- proposer -----------------------------------------------------------------
+# use_llm: true activates the Claude proposer IFF anthropic + ANTHROPIC_API_KEY
+# are present; otherwise it transparently falls back to the mutation proposer.
+use_llm: false

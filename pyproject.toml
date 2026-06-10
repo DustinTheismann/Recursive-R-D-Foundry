@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "rsi-foundry"
+version = "0.2.0"
+description = "Recursive R&D Foundry — a governed successor-evolution lab: evolves and sandboxes successor programs and promotes them only through an external evidence gate (producer != verifier, refutation supremacy, no self-promotion)."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "DustinTheismann" }]
+# Zero third-party RUNTIME deps: the evidence kernel is vendored under vendor/fek
+# (see vendor/README.md) so governance runs cold. PyYAML is optional.
+dependencies = []
+
+[project.optional-dependencies]
+# Real backends activate automatically when present. The foundry is fully
+# functional with zero optional dependencies (deterministic mutation proposer,
+# subprocess containment).
+llm = ["anthropic>=0.40"]
+dev = ["pytest>=7.0"]
+
+[project.scripts]
+rsi-foundry = "rsi_foundry.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["rsi_foundry*"]
+
+[tool.pytest.ini_options]
+addopts = "-q"
+testpaths = ["tests"]
+# The vendored evidence kernel resolves `import fek` with no install.
+pythonpath = [".", "vendor"]

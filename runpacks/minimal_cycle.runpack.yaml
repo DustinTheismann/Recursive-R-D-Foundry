@@ -1,0 +1,3849 @@
+runpack_version: '0.2'
+config:
+  seed: 7
+  cycles: 8
+  per_env_instances: 3
+  qd_grid: 8
+  novelty_k: 5
+  entropy_floor: 0.45
+  novelty_pressure: 0.15
+  scientist_every: 2
+  benchmark_floor: 0.5
+  safety_factor: 2.0
+  assurance_per_check: 0.004
+  assurance_per_coverage: 0.4
+  use_llm: false
+  containment:
+    cpu_seconds: 2
+    mem_mb: 256
+    wall_timeout: 8.0
+  offspring:
+    alphaevolve: 6
+    dgm: 3
+    adas: 3
+root_seed: 7
+lineage_root: b1693f8578b1232ff97556219e4fe6aeac53e0faaeb3fd71f7279fc9733b6bf2
+n_candidates: 102
+cycles:
+- cycle: 1
+  proposed:
+  - c_10bba9c0cc33e0c4
+  - c_e6c90450cd60c8c3
+  - c_cfbf878460e5c886
+  - c_0296deb039d9da08
+  - c_594af19c828e1965
+  - c_89bcff18c14a0044
+  - c_762c95ad7334dc79
+  - c_70b591c422d01508
+  - c_fc00c83bebaac95e
+  - c_d13693c70fbc2e9a
+  - c_f89c31fd08bc8f13
+  - c_636d16da85289cfc
+  - c_0f2cc00ec5ff5664
+  promoted: []
+  archived:
+  - c_10bba9c0cc33e0c4
+  - c_e6c90450cd60c8c3
+  - c_cfbf878460e5c886
+  - c_0296deb039d9da08
+  - c_594af19c828e1965
+  - c_89bcff18c14a0044
+  - c_762c95ad7334dc79
+  - c_70b591c422d01508
+  - c_fc00c83bebaac95e
+  - c_d13693c70fbc2e9a
+  - c_f89c31fd08bc8f13
+  - c_636d16da85289cfc
+  - c_0f2cc00ec5ff5664
+  gate_reports:
+  - cid: c_10bba9c0cc33e0c4
+    fitness: 0.68266
+    fitness_delta: -0.11519
+    novelty_score: 0.03325
+    novelty_pass: false
+    causal_effect: 0.3021
+    causal_pass: false
+    regression_failures: 9
+    benchmark_pass: true
+    contained: true
+    contracts_pass: true
+    capability_drift: 0.0
+    assurance_renewal: 0.0
+    half_life_state: GREEN
+    half_life_pass: false
+    promoted: false
+    lineage_hash: c_10bba9c0cc33e0c4
+    reasons:
+    - fitness_delta<=0.001
+    - novelty<0.15
+    - no_causal_evidence
+    - regressions=9
+  - cid: c_e6c90450cd60c8c3
+    fitness: 0.87896
+    fitness_delta: 0.08111
+    novelty_score: 0.0023
+    novelty_pass: false
+    causal_effect: 0.4984
+    causal_pass: true
+    regression_failures: 0
+    benchmark_pass: true
+    contained: true
+    contracts_pass: true
+    capability_drift: 0.0
+    assurance_renewal: 0.0
+    half_life_state: GREEN
+    half_life_pass: false
+    promoted: false
+    lineage_hash: c_e6c90450cd60c8c3
+    reasons:
+    - novelty<0.15
+  - cid: c_cfbf878460e5c886
+    fitness: 0.68864
+    fitness_delta: -0.10921
+    novelty_score: 0.02983
+    novelty_pass: false
+    causal_effect: 0.30808
+    causal_pass: false
+    regression_failures: 9
+    benchmark_pass: true
+    contained: true
+    contracts_pass: true
+    capability_drift: 0.0
+    assurance_renewal: 0.0
+    half_life_state: GREEN
+    half_life_pass: false
+    promoted: false
+    lineage_hash: c_cfbf878460e5c886
+    reasons:
+    - fitness_delta<=0.001
+    - novelty<0.15
+    - no_causal_evidence
+    - regressions=9
+  - cid: c_0296deb039d9da08
+    fitness: 0.70968
+    fitness_delta: -0.08817
+    novelty_score: 0.0263
+    novelty_pass: false
+    causal_effect: 0.32912
+    causal_pass: false
+    regression_failures: 9
+    benchmark_pass: true
+    contained: true
+    contracts_pass: true
+    capability_drift: 0.0
+    assurance_renewal: 0.0
+    half_life_state: GREEN
+    half_life_pass: false
+    promoted: false
+    lineage_hash: c_0296deb039d9da08
+    reasons:
+    - fitness_delta<=0.001
+    - novelty<0.15
+    - no_causal_evidence
+    - regressions=9
+  - cid: c_594af19c828e1965
+    fitness: 0.87896
+    fitness_delta: 0.08111
+    novelty_score: 0.0023
+    novelty_pass: false
+    causal_effect: 0.4984
+    causal_pass: true
+    regression_failures: 0
+    benchmark_pass: true
+    contained: true
+    contracts_pass: true
+    capability_drift: 0.0
+    assurance_renewal: 0.0
+    half_life_state: GREEN
+    half_life_pass: false
+    promoted: false
+    lineage_hash: c_594af19c828e1965
+    reasons:
+    - novelty<0.15
+  - cid: c_89bcff18c14a0044
+    fitness: 0.87896
+    fitness_delta: 0.08111
+    novelty_score: 0.0023
+    novelty_pass: false
+    causal_effect: 0.28214
+    causal_pass: true
+    regression_failures: 0
+    benchmark_pass: true
+    contained: true
+    contracts_pass: true
+    capability_drift: 0.0
+    assurance_renewal: 0.0
+    half_life_state: GREEN
+    half_life_pass: false
+    promoted: false
+    lineage_hash: c_89bcff18c14a0044
+    reasons:
+    - novelty<0.15
+  - cid: c_762c95ad7334dc79
+    fitness: 0.79785
+    fitness_delta: 0.0
+    novelty_score: 0.02049
+    novelty_pass: false
+    causal_effect: 0.41729
+    causal_pass: true
+    regression_failures: 0
+    benchmark_pass: true
+    contained: true
+    contracts_pass: true
+    capability_drift: 0.0
+    assurance_renewal: 0.0
+    half_life_state: GREEN
+    half_life_pass: false
+    promoted: false
+    lineage_hash: c_762c95ad7334dc79
+    reasons:
+    - fitness_delta<=0.001
+    - novelty<0.15
+  - cid: c_70b591c422d01508
+    fitness: 0.87896
+    fitness_delta: 0.08111
+    novelty_score: 0.0023
+    novelty_pass: false
+    causal_effect: 0.49636
+    causal_pass: true
+    regression_failures: 0
+    benchmark_pass: true
+    contained: true
+    contracts_pass: true
+    capability_drift: 0.0
+    assurance_renewal: 0.0
+    half_life_state: GREEN
+    half_life_pass: false
+    promoted: false
+    lineage_hash: c_70b591c422d01508
+    reasons:
+    - novelty<0.15
+  - cid: c_fc00c83bebaac95e
+    fitness: 0.59319
+    fitness_delta: -0.20466
+    novelty_score: 0.09671
+    novelty_pass: false
+    causal_effect: 0.21263
+    causal_pass: false
+    regression_failures: 6
+    benchmark_pass: true
+    contained: true
+    contracts_pass: true
+    capability_drift: 0.0
+    assurance_renewal: 0.0
+    half_life_state: GREEN
+    half_life_pass: false
+    promoted: false
+    lineage_hash: c_fc00c83bebaac95e
+    reasons:
+    - fitness_delta<=0.001
+    - novelty<0.15
+    - no_causal_evidence
+    - regressions=6
+  - cid: c_d13693c70fbc2e9a
+    fitness: 0.79785
+    fitness_delta: 0.0
+    novelty_score: 0.02049
+    novelty_pass: false
+    causal_effect: 0.41729
+    causal_pass: true
+    regression_failures: 0
+    benchmark_pass: true
+    contained: true
+    contracts_pass: true
+    capability_drift: 0.0
+    assurance_renewal: 0.0
+    half_life_state: GREEN
+    half_life_pass: false
+    promoted: false
+    lineage_hash: c_d13693c70fbc2e9a
+    reasons:
+    - fitness_delta<=0.001
+    - novelty<0.15
+  - cid: c_f89c31fd08bc8f13
+    fitness: 0.73265
+    fitness_delta: -0.0652
+    novelty_score: 0.03036
+    novelty_pass: false
+    causal_effect: 0.35209
+    causal_pass: false
+    regression_failures: 8
+    benchmark_pass: true
+    contained: true
+    contracts_pass: true
+    capability_drift: 0.0
+    assurance_renewal: 0.0
+    half_life_state: GREEN
+    half_life_pass: false
+    promoted: false
+    lineage_hash: c_f89c31fd08bc8f13
+    reasons:
+    - fitness_delta<=0.001
+    - novelty<0.15
+    - no_causal_evidence
+    - regressions=8
+  - cid: c_636d16da85289cfc
+    fitness: 0.86368
+    fitness_delta: 0.06583
+    novelty_score: 0.0092
+    novelty_pass: false
+    causal_effect: 0.48312
+    causal_pass: true
+    regression_failures: 0
+    benchmark_pass: true
+    contained: true
+    contracts_pass: true
+    capability_drift: 0.0
+    assurance_renewal: 0.0
+    half_life_state: GREEN
+    half_life_pass: false
+    promoted: false
+    lineage_hash: c_636d16da85289cfc
+    reasons:
+    - novelty<0.15
+  - cid: c_0f2cc00ec5ff5664
+    fitness: 0.94979
+    fitness_delta: 0.15194
+    novelty_score: 0.04211
+    novelty_pass: false
+    causal_effect: 0.56719
+    causal_pass: true
+    regression_failures: 0
+    benchmark_pass: true
+    contained: true
+    contracts_pass: true
+    capability_drift: 0.0
+    assurance_renewal: 0.0
+    half_life_state: GREEN
+    half_life_pass: false
+    promoted: false
+    lineage_hash: c_0f2cc00ec5ff5664
+    reasons:
+    - novelty<0.15
+  half_life_state: GREEN
+  capability_index: 0.79785
+  assurance_index: 0.07076
+  population_entropy: 0.3997
+  environment:
+    envs:
+    - easy
+    - baseline
+    - mixed
+    - poet1
+    qd_coverage: 0.0625
+    qd_score: 3.1546
+  notes:
+  - poet:+poet1@0.7429
+  timestamp: 1780877873.3325214
+- cycle: 2
+  proposed:
+  - c_861e6e3d955b4f8f
+  - c_d05549610f8d697a
+  - c_3b533650951f2606
+  - c_435ff5d3f3251c01
+  - c_d64bef314c12b560
+  - c_ca0e0a59285e4237
+  - c_5f3a85086872954a
+  - c_9047686d4967d21a
+  - c_e76ba11d9ec86536
+  - c_d13693c70fbc2e9a
+  - c_c8eb48d5df966a3d
+  - c_6225952d1eda98ae
+  - c_b83a4604e2070dfa
+  - c_59a2b9350d933978
+  promoted: []
+  archived:
+  - c_861e6e3d955b4f8f
+  - c_d05549610f8d697a
+  - c_3b533650951f2606
+  - c_435ff5d3f3251c01
+  - c_d64bef314c12b560
+  - c_ca0e0a59285e4237
+  - c_5f3a85086872954a
+  - c_9047686d4967d21a
+  - c_e76ba11d9ec86536
+  - c_d13693c70fbc2e9a
+  - c_c8eb48d5df966a3d
+  - c_6225952d1eda98ae
+  - c_b83a4604e2070dfa
+  - c_59a2b9350d933978
+  gate_reports:
+  - cid: c_861e6e3d955b4f8f
+    fitness: 0.81338
+    fitness_delta: 0.01553
+    novelty_score: 0.01195
+    novelty_pass: false
+    causal_effect: 0.42558
+    causal_pass: false
+    regression_failures: 1
+    benchmark_pass: true
+    contained: true
+    contracts_pass: true
+    capability_drift: 0.0
+    assurance_renewal: 0.0
+    half_life_state: GREEN
+    half_life_pass: false
+    promoted: false
+    lineage_hash: c_861e6e3d955b4f8f
+    reasons:
+    - novelty<0.15
+    - no_causal_evidence
+    - regressions=1
+  - cid: c_d05549610f8d697a
+    fitness: 0.78115
+    fitness_delta: -0.0167
+    novelty_score: 0.01169
+    novelty_pass: false
+    causal_effect: 0.39335
+    causal_pass: true
+    regression_failures: 4
+    benchmark_pass: true
+    contained: true
+    contracts_pass: true
+    capability_drift: 0.0
+    assurance_renewal: 0.0
+    half_life_state: GREEN
+    half_life_pass: false
+    promoted: false
+    lineage_hash: c_d05549610f8d697a
+    reasons:
+    - fitness_delta<=0.001
+    - novelty<0.15
+    - regressions=4
+  - cid: c_3b533650951f2606
+    fitness: 0.89209
+    fitness_delta: 0.09424
+    novelty_score: 0.01153
+    novelty_pass: false
+    causal_effect: 0.50429
+    causal_pass: false
+    regression_failures: 1
+    benchmark_pass: true
+    contained: true
+    contracts_pass: true
+    capability_drift: 0.0
+    assurance_renewal: 0.0
+    half_life_state: GREEN
+    half_life_pass: false
+    promoted: false
+    lineage_hash: c_3b533650951f2606
+    reasons:
+    - novelty<0.15
+    - no_causal_evidence
+    - regressions=1
+  - cid: c_435ff5d3f3251c01
+    fitness: 0.93612
+    fitness_delta: 0.13827
+    novelty_score: 0.02617
+    novelty_pass: false
+    causal_effect: 0.45069
+    causal_pass: false
+    regression_failures: 0
+    benchmark_pass: true
+    contained: true
+    contracts_pass: true
+    capability_drift: 0.0
+    assurance_renewal: 0.0
+    half_life_state: GREEN
+    half_life_pass: false
+    promoted: false
+    lineage_hash: c_435ff5d3f3251c01
+    reasons:
+    - novelty<0.15
+    - no_causal_evidence
+  - cid: c_d64bef314c12b560
+    fitness: 0.51566
+    fitness_delta: -0.28219
+    novelty_score: 0.119
+    novelty_pass: false
+    causal_effect: 0.12786
+    causal_pass: false
+    regression_failures: 9
+    benchmark_pass: true
+    contained: true
+    contracts_pass: true
+    capability_drift: 0.0
+    assurance_renewal: 0.0
+    half_life_state: GREEN
+    half_life_pass: false
+    promoted: false
+    lineage_hash: c_d64bef314c12b560
+    reasons:
+    - fitness_delta<=0.001
+    - novelty<0.15
+    - no_causal_evidence
+    - regressions=9
+  - cid: c_ca0e0a59285e4237
+    fitness: 0.66603
+    fitness_delta: -0.13182
+    novelty_score: 0.02051
+    novelty_pass: false
+    causal_effect: 0.27823
+    causal_pass: false
+    regression_failures: 6
+    benchmark_pass: true
+    contained: true
+    contracts_pass: true
+    capability_drift: 0.0
+    assurance_renewal: 0.0
+    half_life_state: GREEN
+    half_life_pass: false
+    promoted: false
+    lineage_hash: c_ca0e0a59285e4237
+    reasons:
+    - fitness_delta<=0.001
+    - novelty<0.15
+    - no_causal_evidence
+    - regressions=6
+  - cid: c_5f3a85086872954a
+    fitness: 0.83329
+    fitness_delta: 0.03544
+    novelty_score: 0.0127
+    novelty_pass: false
+    causal_effect: 0.35058
+    causal_pass: true
+    regression_failures: 0
+    benchmark_pass: true
+    contained: true
+    contracts_pass: true
+    capability_drift: 0.0
+    assurance_renewal: 0.0
+    half_life_state: GREEN
+    half_life_pass: false
+    promoted: false
+    lineage_hash: c_5f3a85086872954a
+    reasons:
+    - novelty<0.15
+  - cid: c_9047686d4967d21a
+    fitness: 0.3878
+    fitness_delta: -0.41005
+    novelty_score: 0.22235
+    novelty_pass: true
+    causal_effect: 0.0
+    causal_pass: false
+    regression_failures: 9
+    benchmark_pass: false
+    contained: true
+    contracts_pass: true
+    capability_drift: 0.0
+    assurance_renewal: 0.0
+    half_life_state: GREEN
+    half_life_pass: false
+    promoted: false
+    lineage_hash: c_9047686d4967d21a
+    reasons:
+    - benchmark_below_floor
+    - fitness_delta<=0.001
+    - no_causal_evidence
+    - regressions=9
+  - cid: c_e76ba11d9ec86536
+    fitness: 0.68244
+    fitness_delta: -0.11541
+    novelty_score: 0.01258
+    novelty_pass: false
+    causal_effect: 0.29464
+    causal_pass: false
+    regression_failures: 8
+    benchmark_pass: true
+    contained: true
+    contracts_pass: true
+    capability_drift: 0.0
+    assurance_renewal: 0.0
+    half_life_state: GREEN
+    half_life_pass: false
+    promoted: false
+    lineage_hash: c_e76ba11d9ec86536
+    reasons:
+    - fitness_delta<=0.001
+    - novelty<0.15
+    - no_causal_evidence
+    - regressions=8
+  - cid: c_d13693c70fbc2e9a
+    fitness: 0.79785
+    fitness_delta: 0.0
+    novelty_score: 0.00538
+    novelty_pass: false
+    causal_effect: 0.41005
+    causal_pass: true
+    regression_failures: 0
+    benchmark_pass: true
+    contained: true
+    contracts_pass: true
+    capability_drift: 0.0
+    assurance_renewal: 0.0
+    half_life_state: GREEN
+    half_life_pass: false
+    promoted: false
+    lineage_hash: c_d13693c70fbc2e9a
+    reasons:
+    - fitness_delta<=0.001
+    - novelty<0.15
+  - cid: c_c8eb48d5df966a3d
+    fitness: 0.75554
+    fitness_delta: -0.04231
+    novelty_score: 0.0212
+    novelty_pass: false
+    causal_effect: 0.36774
+    causal_pass: true
+    regression_failures: 5
+    benchmark_pass: true
+    contained: true
+    contracts_pass: true
+    capability_drift: 0.0
+    assurance_renewal: 0.0
+    half_life_state: GREEN
+    half_life_pass: false
+    promoted: false
+    lineage_hash: c_c8eb48d5df966a3d
+    reasons:
+    - fitness_delta<=0.001
+    - novelty<0.15
+    - regressions=5
+  - cid: c_6225952d1eda98ae
+    fitness: 0.64194
+    fitness_delta: -0.15591
+    novelty_score: 0.0368
+    novelty_pass: false
+    causal_effect: 0.25414
+    causal_pass: false
+    regression_failures: 5
+    benchmark_pass: true
+    contained: true
+    contracts_pass: true
+    capability_drift: 0.0
+    assurance_renewal: 0.0
+    half_life_state: GREEN
+    half_life_pass: false
+    promoted: false
+    lineage_hash: c_6225952d1eda98ae
+    reasons:
+    - fitness_delta<=0.001
+    - novelty<0.15
+    - no_causal_evidence
+    - regressions=5
+  - cid: c_b83a4604e2070dfa
+    fitness: 0.85436
+    fitness_delta: 0.05651
+    novelty_score: 0.01081
+    novelty_pass: false
+    causal_effect: 0.46656
+    causal_pass: false
+    regression_failures: 0
+    benchmark_pass: true
+    contained: true
+    contracts_pass: true
+    capability_drift: 0.0
+    assurance_renewal: 0.0
+    half_life_state: GREEN
+    half_life_pass: false
+    promoted: false
+    lineage_hash: c_b83a4604e2070dfa
+    reasons:
+    - novelty<0.15
+    - no_causal_evidence
+  - cid: c_59a2b9350d933978
+    fitness: 0.84405
+    fitness_delta: 0.0462
+    novelty_score: 0.01123
+    novelty_pass: false
+    causal_effect: 0.45625
+    causal_pass: true
+    regression_failures: 0
+    benchmark_pass: true
+    contained: true
+    contracts_pass: true
+    capability_drift: 0.0
+    assurance_renewal: 0.0
+    half_life_state: GREEN
+    half_life_pass: false
+    promoted: false
+    lineage_hash: c_59a2b9350d933978
+    reasons:
+    - novelty<0.15
+  half_life_state: GREEN
+  capability_index: 0.77335
+  assurance_index: 0.13928
+  population_entropy: 0.3823
+  environment:
+    envs:
+    - easy
+    - baseline
+    - mixed
+    - poet1
+    - poet2
+    qd_coverage: 0.0938
+    qd_score: 4.0941
+  notes:
+  - "scientist:supported (\u0394=+0.3856)"
+  - poet:+poet2@0.8
+  timestamp: 1780877873.834462
+- cycle: 3
+  proposed:
+  - c_e04402ceb2bcbc4c
+  - c_0ac8b9d0890f1872
+  - c_6ea14afac218810e
+  - c_a94c69d87bebf47d
+  - c_85fdd767722229dd
+  - c_691f44d4dae56a8c
+  - c_91e724167a90c2f6
+  - c_a94baefa5275c189
+  - c_61b8cc2a62919b3a
+  - c_584b884de1263a68
+  - c_da370e3ad0711b46
+  - c_6d6773dba1d4712c
+  - c_9dba5a9b3cc036b2
+  promoted: []
+  archived:
+  - c_e04402ceb2bcbc4c
+  - c_0ac8b9d0890f1872
+  - c_6ea14afac218810e
+  - c_a94c69d87bebf47d
+  - c_85fdd767722229dd
+  - c_691f44d4dae56a8c
+  - c_91e724167a90c2f6
+  - c_a94baefa5275c189
+  - c_61b8cc2a62919b3a
+  - c_584b884de1263a68
+  - c_da370e3ad0711b46
+  - c_6d6773dba1d4712c
+  - c_9dba5a9b3cc036b2
+  gate_reports:
+  - cid: c_e04402ceb2bcbc4c
+    fitness: 0.48052
+    fitness_delta: -0.31733
+    novelty_score: 0.05262
+    novelty_pass: false
+    causal_effect: 0.05981
+    causal_pass: false
+    regression_failures: 9
+    benchmark_pass: false
+    contained: true
+    contracts_pass: true
+    capability_drift: 0.0
+    assurance_renewal: 0.0
+    half_life_state: GREEN
+    half_life_pass: false
+    promoted: false
+    lineage_hash: c_e04402ceb2bcbc4c
+    reasons:
+    - benchmark_below_floor
+    - fitness_delta<=0.001
+    - novelty<0.15
+    - no_causal_evidence
+    - regressions=9
+  - cid: c_0ac8b9d0890f1872
+    fitness: 0.92779
+    fitness_delta: 0.12994
+    novelty_score: 0.02008
+    novelty_pass: false
+    causal_effect: 0.2353
+    causal_pass: true
+    regression_failures: 0
+    benchmark_pass: true
+    contained: true
+    contracts_pass: true
+    capability_drift: 0.0
+    assurance_renewal: 0.0
+    half_life_state: GREEN
+    half_life_pass: false
+    promoted: false
+    lineage_hash: c_0ac8b9d0890f1872
+    reasons:
+    - novelty<0.15
+  - cid: c_6ea14afac218810e
+    fitness: 0.42071
+    fitness_delta: -0.37714
+    novelty_score: 0.07658
+    novelty_pass: false
+    causal_effect: 0.0
+    causal_pass: false
+    regression_failures: 9
+    benchmark_pass: false
+    contained: true
+    contracts_pass: true
+    capability_drift: 0.0
+    assurance_renewal: 0.0
+    half_life_state: GREEN
+    half_life_pass: false
+    promoted: false
+    lineage_hash: c_6ea14afac218810e
+    reasons:
+    - benchmark_below_floor
+    - fitness_delta<=0.001
+    - novelty<0.15
+    - no_causal_evidence
+    - regressions=9
+  - cid: c_a94c69d87bebf47d
+    fitness: 0.69086
+    fitness_delta: -0.10699
+    novelty_score: 0.01587
+    novelty_pass: false
+    causal_effect: 0.27015
+    causal_pass: false
+    regression_failures: 6
+    benchmark_pass: true
+    contained: true
+    contracts_pass: true
+    capability_drift: 0.0
+    assurance_renewal: 0.0
+    half_life_state: GREEN
+    half_life_pass: false
+    promoted: false
+    lineage_hash: c_a94c69d87bebf47d
+    reasons:
+    - fitness_delta<=0.001
+    - novelty<0.15
+    - no_causal_evidence
+    - regressions=6
+  - cid: c_85fdd767722229dd
+    fitness: 0.92779
+    fitness_delta: 0.12994
+    novelty_score: 0.02008
+    novelty_pass: false
+    causal_effect: 0.44052
+    causal_pass: true
+    regression_failures: 0
+    benchmark_pass: true
+    contained: true
+    contracts_pass: true
+    capability_drift: 0.0
+    assurance_renewal: 0.0
+    half_life_state: GREEN
+    half_life_pass: false
+    promoted: false
+    lineage_hash: c_85fdd767722229dd
+    reasons:
+    - novelty<0.15
+  - cid: c_691f44d4dae56a8c
+    fitness: 0.82149
+    fitness_delta: 0.02364
+    novelty_score: 0.02711
+    novelty_pass: false
+    causal_effect: 0.40078
+    causal_pass: false
+    regression_failures: 3
+    benchmark_pass: true
+    contained: true
+    contracts_pass: true
+    capability_drift: 0.0
+    assurance_renewal: 0.0
+    half_life_state: GREEN
+    half_life_pass: false
+    promoted: false
+    lineage_hash: c_691f44d4dae56a8c
+    reasons:
+    - novelty<0.15
+    - no_causal_evidence
+    - regressions=3
+  - cid: c_91e724167a90c2f6
+    fitness: 0.69932
+    fitness_delta: -0.09853
+    novelty_score: 0.01489
+    novelty_pass: false
+    causal_effect: 0.27861
+    causal_pass: false
+    regression_failures: 9
+    benchmark_pass: true
+    contained: true
+    contracts_pass: true
+    capability_drift: 0.0
+    assurance_renewal: 0.0
+    half_life_state: GREEN
+    half_life_pass: false
+    promoted: false
+    lineage_hash: c_91e724167a90c2f6
+    reasons:
+    - fitness_delta<=0.001
+    - novelty<0.15
+    - no_causal_evidence
+    - regressions=9
+  - cid: c_a94baefa5275c189
+    fitness: 0.50009
+    fitness_delta: -0.29776
+    novelty_score: 0.03109
+    novelty_pass: false
+    causal_effect: 0.07938
+    causal_pass: false
+    regression_failures: 9
+    benchmark_pass: true
+    contained: true
+    contracts_pass: true
+    capability_drift: 0.0
+    assurance_renewal: 0.0
+    half_life_state: GREEN
+    half_life_pass: false
+    promoted: false
+    lineage_hash: c_a94baefa5275c189
+    reasons:
+    - fitness_delta<=0.001
+    - novelty<0.15
+    - no_causal_evidence
+    - regressions=9
+  - cid: c_61b8cc2a62919b3a
+    fitness: 0.56093
+    fitness_delta: -0.23692
+    novelty_score: 0.04906
+    novelty_pass: false
+    causal_effect: 0.14022
+    causal_pass: false
+    regression_failures: 9
+    benchmark_pass: true
+    contained: true
+    contracts_pass: true
+    capability_drift: 0.0
+    assurance_renewal: 0.0
+    half_life_state: GREEN
+    half_life_pass: false
+    promoted: false
+    lineage_hash: c_61b8cc2a62919b3a
+    reasons:
+    - fitness_delta<=0.001
+    - novelty<0.15
+    - no_causal_evidence
+    - regressions=9
+  - cid: c_584b884de1263a68
+    fitness: 0.71172
+    fitness_delta: -0.08613
+    novelty_score: 0.01894
+    novelty_pass: false
+    causal_effect: 0.29101
+    causal_pass: false
+    regression_failures: 6
+    benchmark_pass: true
+    contained: true
+    contracts_pass: true
+    capability_drift: 0.0
+    assurance_renewal: 0.0
+    half_life_state: GREEN
+    half_life_pass: false
+    promoted: false
+    lineage_hash: c_584b884de1263a68
+    reasons:
+    - fitness_delta<=0.001
+    - novelty<0.15
+    - no_causal_evidence
+    - regressions=6
+  - cid: c_da370e3ad0711b46
+    fitness: 0.50298
+    fitness_delta: -0.29487
+    novelty_score: 0.03025
+    novelty_pass: false
+    causal_effect: 0.08227
+    causal_pass: false
+    regression_failures: 9
+    benchmark_pass: true
+    contained: true
+    contracts_pass: true
+    capability_drift: 0.0
+    assurance_renewal: 0.0
+    half_life_state: GREEN
+    half_life_pass: false
+    promoted: false
+    lineage_hash: c_da370e3ad0711b46
+    reasons:
+    - fitness_delta<=0.001
+    - novelty<0.15
+    - no_causal_evidence
+    - regressions=9
+  - cid: c_6d6773dba1d4712c
+    fitness: 0.7462
+    fitness_delta: -0.05165
+    novelty_score: 0.03427
+    novelty_pass: false
+    causal_effect: 0.32549
+    causal_pass: false
+    regression_failures: 4
+    benchmark_pass: true
+    contained: true
+    contracts_pass: true
+    capability_drift: 0.0
+    assurance_renewal: 0.0
+    half_life_state: GREEN
+    half_life_pass: false
+    promoted: false
+    lineage_hash: c_6d6773dba1d4712c
+    reasons:
+    - fitness_delta<=0.001
+    - novelty<0.15
+    - no_causal_evidence
+    - regressions=4
+  - cid: c_9dba5a9b3cc036b2
+    fitness: 0.6583
+    fitness_delta: -0.13955
+    novelty_score: 0.04827
+    novelty_pass: false
+    causal_effect: 0.23759
+    causal_pass: false
+    regression_failures: 7
+    benchmark_pass: true
+    contained: true
+    contracts_pass: true
+    capability_drift: 0.0
+    assurance_renewal: 0.0
+    half_life_state: GREEN
+    half_life_pass: false
+    promoted: false
+    lineage_hash: c_9dba5a9b3cc036b2
+    reasons:
+    - fitness_delta<=0.001
+    - novelty<0.15
+    - no_causal_evidence
+    - regressions=7
+  half_life_state: GREEN
+  capability_index: 0.77827
+  assurance_index: 0.21
+  population_entropy: 0.4688
+  environment:
+    envs:
+    - easy
+    - baseline
+    - mixed
+    - poet1
+    - poet2
+    - poet3
+    qd_coverage: 0.1406
+    qd_score: 6.1696
+  notes:
+  - poet:+poet3@0.7959
+  timestamp: 1780877874.4030838
+- cycle: 4
+  proposed:
+  - c_ef35eb943d988405
+  - c_a58b2b4062e46cd2
+  - c_5abda1cd13c646bf
+  - c_d90b4a613fd4d287
+  - c_033c4294c3d444ff
+  - c_ff0e5f50ac3175a0
+  - c_e41e7712a6381ceb
+  - c_a47b3b33365cfd30
+  - c_c2961b1e948f8d9d
+  - c_d13693c70fbc2e9a
+  - c_348c81bbd9c95e03
+  - c_78a48a5ad711b0ab
+  - c_8d0732dcb51998ce
+  - c_59a2b9350d933978
+  promoted:
+  - c_033c4294c3d444ff
+  - c_348c81bbd9c95e03
+  - c_78a48a5ad711b0ab
+  archived:
+  - c_ef35eb943d988405
+  - c_a58b2b4062e46cd2
+  - c_5abda1cd13c646bf
+  - c_d90b4a613fd4d287
+  - c_ff0e5f50ac3175a0
+  - c_e41e7712a6381ceb
+  - c_a47b3b33365cfd30
+  - c_c2961b1e948f8d9d
+  - c_d13693c70fbc2e9a
+  - c_8d0732dcb51998ce
+  - c_59a2b9350d933978
+  gate_reports:
+  - cid: c_ef35eb943d988405
+    fitness: 0.61439
+    fitness_delta: -0.18346
+    novelty_score: 0.02179
+    novelty_pass: true
+    causal_effect: 0.18681
+    causal_pass: false
+    regression_failures: 9
+    benchmark_pass: true
+    contained: true
+    contracts_pass: true
+    capability_drift: 0.0
+    assurance_renewal: 0.0
+    half_life_state: GREEN
+    half_life_pass: false
+    promoted: false
+    lineage_hash: c_ef35eb943d988405
+    reasons:
+    - fitness_delta<=0.001
+    - no_causal_evidence
+    - regressions=9
+  - cid: c_a58b2b4062e46cd2
+    fitness: 0.73118
+    fitness_delta: -0.06667
+    novelty_score: 0.00572
+    novelty_pass: true
+    causal_effect: 0.3036
+    causal_pass: false
+    regression_failures: 6
+    benchmark_pass: true
+    contained: true
+    contracts_pass: true
+    capability_drift: 0.0
+    assurance_renewal: 0.0
+    half_life_state: GREEN
+    half_life_pass: false
+    promoted: false
+    lineage_hash: c_a58b2b4062e46cd2
+    reasons:
+    - fitness_delta<=0.001
+    - no_causal_evidence
+    - regressions=6
+  - cid: c_5abda1cd13c646bf
+    fitness: 0.7408
+    fitness_delta: -0.05705
+    novelty_score: 0.00828
+    novelty_pass: true
+    causal_effect: 0.31322
+    causal_pass: false
+    regression_failures: 7
+    benchmark_pass: true
+    contained: true
+    contracts_pass: true
+    capability_drift: 0.0
+    assurance_renewal: 0.0
+    half_life_state: GREEN
+    half_life_pass: false
+    promoted: false
+    lineage_hash: c_5abda1cd13c646bf
+    reasons:
+    - fitness_delta<=0.001
+    - no_causal_evidence
+    - regressions=7
+  - cid: c_d90b4a613fd4d287
+    fitness: 0.68711
+    fitness_delta: -0.11074
+    novelty_score: 0.02321
+    novelty_pass: true
+    causal_effect: 0.25953
+    causal_pass: false
+    regression_failures: 5
+    benchmark_pass: true
+    contained: true
+    contracts_pass: true
+    capability_drift: 0.0
+    assurance_renewal: 0.0
+    half_life_state: GREEN
+    half_life_pass: false
+    promoted: false
+    lineage_hash: c_d90b4a613fd4d287
+    reasons:
+    - fitness_delta<=0.001
+    - no_causal_evidence
+    - regressions=5
+  - cid: c_033c4294c3d444ff
+    fitness: 0.84747
+    fitness_delta: 0.04962
+    novelty_score: 0.0235
+    novelty_pass: true
+    causal_effect: 0.41989
+    causal_pass: true
+    regression_failures: 0
+    benchmark_pass: true
+    contained: true
+    contracts_pass: true
+    capability_drift: 0.07561
+    assurance_renewal: 0.2282
+    half_life_state: GREEN
+    half_life_pass: true
+    promoted: true
+    lineage_hash: c_033c4294c3d444ff
+    reasons:
+    - all_gates_passed
+  - cid: c_ff0e5f50ac3175a0
+    fitness: 0.68088
+    fitness_delta: -0.16659
+    novelty_score: 0.02807
+    novelty_pass: true
+    causal_effect: 0.2533
+    causal_pass: false
+    regression_failures: 12
+    benchmark_pass: true
+    contained: true
+    contracts_pass: true
+    capability_drift: 0.0
+    assurance_renewal: 0.0
+    half_life_state: GREEN
+    half_life_pass: false
+    promoted: false
+    lineage_hash: c_ff0e5f50ac3175a0
+    reasons:
+    - fitness_delta<=0.001
+    - no_causal_evidence
+    - regressions=12
+  - cid: c_e41e7712a6381ceb
+    fitness: 0.71003
+    fitness_delta: -0.13744
+    novelty_score: 0.00878
+    novelty_pass: true
+    causal_effect: 0.28245
+    causal_pass: false
+    regression_failures: 16
+    benchmark_pass: true
+    contained: true
+    contracts_pass: true
+    capability_drift: 0.0
+    assurance_renewal: 0.0
+    half_life_state: GREEN
+    half_life_pass: false
+    promoted: false
+    lineage_hash: c_e41e7712a6381ceb
+    reasons:
+    - fitness_delta<=0.001
+    - no_causal_evidence
+    - regressions=16
+  - cid: c_a47b3b33365cfd30
+    fitness: 0.60603
+    fitness_delta: -0.24144
+    novelty_score: 0.02177
+    novelty_pass: true
+    causal_effect: 0.17845
+    causal_pass: false
+    regression_failures: 18
+    benchmark_pass: true
+    contained: true
+    contracts_pass: true
+    capability_drift: 0.0
+    assurance_renewal: 0.0
+    half_life_state: GREEN
+    half_life_pass: false
+    promoted: false
+    lineage_hash: c_a47b3b33365cfd30
+    reasons:
+    - fitness_delta<=0.001
+    - no_causal_evidence
+    - regressions=18
+  - cid: c_c2961b1e948f8d9d
+    fitness: 0.72982
+    fitness_delta: -0.11765
+    novelty_score: 0.00647
+    novelty_pass: true
+    causal_effect: 0.30224
+    causal_pass: false
+    regression_failures: 17
+    benchmark_pass: true
+    contained: true
+    contracts_pass: true
+    capability_drift: 0.0
+    assurance_renewal: 0.0
+    half_life_state: GREEN
+    half_life_pass: false
+    promoted: false
+    lineage_hash: c_c2961b1e948f8d9d
+    reasons:
+    - fitness_delta<=0.001
+    - no_causal_evidence
+    - regressions=17
+  - cid: c_d13693c70fbc2e9a
+    fitness: 0.79785
+    fitness_delta: -0.04962
+    novelty_score: 0.00538
+    novelty_pass: true
+    causal_effect: 0.37027
+    causal_pass: true
+    regression_failures: 9
+    benchmark_pass: true
+    contained: true
+    contracts_pass: true
+    capability_drift: 0.0
+    assurance_renewal: 0.0
+    half_life_state: GREEN
+    half_life_pass: false
+    promoted: false
+    lineage_hash: c_d13693c70fbc2e9a
+    reasons:
+    - fitness_delta<=0.001
+    - regressions=9
+  - cid: c_348c81bbd9c95e03
+    fitness: 0.92081
+    fitness_delta: 0.07334
+    novelty_score: 0.0107
+    novelty_pass: true
+    causal_effect: 0.49183
+    causal_pass: true
+    regression_failures: 0
+    benchmark_pass: true
+    contained: true
+    contracts_pass: true
+    capability_drift: 0.07334
+    assurance_renewal: 0.19153
+    half_life_state: GREEN
+    half_life_pass: true
+    promoted: true
+    lineage_hash: c_348c81bbd9c95e03
+    reasons:
+    - all_gates_passed
+  - cid: c_78a48a5ad711b0ab
+    fitness: 0.92636
+    fitness_delta: 0.00555
+    novelty_score: 0.00992
+    novelty_pass: true
+    causal_effect: 0.48859
+    causal_pass: true
+    regression_failures: 0
+    benchmark_pass: true
+    contained: true
+    contracts_pass: true
+    capability_drift: 0.00555
+    assurance_renewal: 0.18875
+    half_life_state: GREEN
+    half_life_pass: true
+    promoted: true
+    lineage_hash: c_78a48a5ad711b0ab
+    reasons:
+    - all_gates_passed
+  - cid: c_8d0732dcb51998ce
+    fitness: 0.73834
+    fitness_delta: -0.18802
+    novelty_score: 0.00661
+    novelty_pass: true
+    causal_effect: 0.31076
+    causal_pass: false
+    regression_failures: 18
+    benchmark_pass: true
+    contained: true
+    contracts_pass: true
+    capability_drift: 0.0
+    assurance_renewal: 0.0
+    half_life_state: GREEN
+    half_life_pass: false
+    promoted: false
+    lineage_hash: c_8d0732dcb51998ce
+    reasons:
+    - fitness_delta<=0.001
+    - no_causal_evidence
+    - regressions=18
+  - cid: c_59a2b9350d933978
+    fitness: 0.84405
+    fitness_delta: -0.08231
+    novelty_score: 0.01123
+    novelty_pass: true
+    causal_effect: 0.41647
+    causal_pass: true
+    regression_failures: 12
+    benchmark_pass: true
+    contained: true
+    contracts_pass: true
+    capability_drift: 0.0
+    assurance_renewal: 0.0
+    half_life_state: GREEN
+    half_life_pass: false
+    promoted: false
+    lineage_hash: c_59a2b9350d933978
+    reasons:
+    - fitness_delta<=0.001
+    - regressions=12
+  half_life_state: GREEN
+  capability_index: 0.92636
+  assurance_index: 0.266
+  population_entropy: 0.4609
+  environment:
+    envs:
+    - easy
+    - baseline
+    - mixed
+    - poet1
+    - poet2
+    - poet3
+    qd_coverage: 0.1406
+    qd_score: 6.2455
+  notes:
+  - "scientist:supported (\u0394=+0.3443)"
+  timestamp: 1780877874.9688206
+- cycle: 5
+  proposed:
+  - c_3753c8a5c56495cb
+  - c_579122076b1aed67
+  - c_98bb1fce529782d2
+  - c_15dd9ceec1a03677
+  - c_1a0f373540667abc
+  - c_e364dcbddc82b0a6
+  - c_196fcd62dab2c2eb
+  - c_25d4d3e246a4be70
+  - c_012618f40cf3e562
+  - c_609d28c871dc98b9
+  - c_e2a02275bb6bcf6c
+  - c_1851b8af10d40168
+  - c_1475402847f49bcc
+  promoted: []
+  archived:
+  - c_3753c8a5c56495cb
+  - c_579122076b1aed67
+  - c_98bb1fce529782d2
+  - c_15dd9ceec1a03677
+  - c_1a0f373540667abc
+  - c_e364dcbddc82b0a6
+  - c_196fcd62dab2c2eb
+  - c_25d4d3e246a4be70
+  - c_012618f40cf3e562
+  - c_609d28c871dc98b9
+  - c_e2a02275bb6bcf6c
+  - c_1851b8af10d40168
+  - c_1475402847f49bcc
+  gate_reports:
+  - cid: c_3753c8a5c56495cb
+    fitness: 0.42758
+    fitness_delta: -0.49878
+    novelty_score: 0.03442
+    novelty_pass: true
+    causal_effect: 0.0
+    causal_pass: false
+    regression_failures: 18
+    benchmark_pass: false
+    contained: true
+    contracts_pass: true
+    capability_drift: 0.0
+    assurance_renewal: 0.0
+    half_life_state: GREEN
+    half_life_pass: false
+    promoted: false
+    lineage_hash: c_3753c8a5c56495cb
+    reasons:
+    - benchmark_below_floor
+    - fitness_delta<=0.001
+    - no_causal_evidence
+    - regressions=18
+  - cid: c_579122076b1aed67
+    fitness: 0.84747
+    fitness_delta: -0.07889
+    novelty_score: 0.00416
+    novelty_pass: true
+    causal_effect: 0.41989
+    causal_pass: true
+    regression_failures: 18
+    benchmark_pass: true
+    contained: true
+    contracts_pass: true
+    capability_drift: 0.0
+    assurance_renewal: 0.0
+    half_life_state: GREEN
+    half_life_pass: false
+    promoted: false
+    lineage_hash: c_579122076b1aed67
+    reasons:
+    - fitness_delta<=0.001
+    - regressions=18
+  - cid: c_98bb1fce529782d2
+    fitness: 0.77865
+    fitness_delta: -0.14771
+    novelty_score: 0.02254
+    novelty_pass: true
+    causal_effect: 0.35107
+    causal_pass: true
+    regression_failures: 18
+    benchmark_pass: true
+    contained: true
+    contracts_pass: true
+    capability_drift: 0.0
+    assurance_renewal: 0.0
+    half_life_state: GREEN
+    half_life_pass: false
+    promoted: false
+    lineage_hash: c_98bb1fce529782d2
+    reasons:
+    - fitness_delta<=0.001
+    - regressions=18
+  - cid: c_15dd9ceec1a03677
+    fitness: 0.46301
+    fitness_delta: -0.46335
+    novelty_score: 0.04095
+    novelty_pass: true
+    causal_effect: 0.03543
+    causal_pass: false
+    regression_failures: 18
+    benchmark_pass: false
+    contained: true
+    contracts_pass: true
+    capability_drift: 0.0
+    assurance_renewal: 0.0
+    half_life_state: GREEN
+    half_life_pass: false
+    promoted: false
+    lineage_hash: c_15dd9ceec1a03677
+    reasons:
+    - benchmark_below_floor
+    - fitness_delta<=0.001
+    - no_causal_evidence
+    - regressions=18
+  - cid: c_1a0f373540667abc
+    fitness: 0.85924
+    fitness_delta: -0.06712
+    novelty_score: 0.00242
+    novelty_pass: true
+    causal_effect: 0.14319
+    causal_pass: true
+    regression_failures: 16
+    benchmark_pass: true
+    contained: true
+    contracts_pass: true
+    capability_drift: 0.0
+    assurance_renewal: 0.0
+    half_life_state: GREEN
+    half_life_pass: false
+    promoted: false
+    lineage_hash: c_1a0f373540667abc
+    reasons:
+    - fitness_delta<=0.001
+    - regressions=16
+  - cid: c_e364dcbddc82b0a6
+    fitness: 0.64446
+    fitness_delta: -0.2819
+    novelty_score: 0.02253
+    novelty_pass: true
+    causal_effect: 0.21688
+    causal_pass: true
+    regression_failures: 18
+    benchmark_pass: true
+    contained: true
+    contracts_pass: true
+    capability_drift: 0.0
+    assurance_renewal: 0.0
+    half_life_state: GREEN
+    half_life_pass: false
+    promoted: false
+    lineage_hash: c_e364dcbddc82b0a6
+    reasons:
+    - fitness_delta<=0.001
+    - regressions=18
+  - cid: c_196fcd62dab2c2eb
+    fitness: 0.85924
+    fitness_delta: -0.06712
+    novelty_score: 0.00242
+    novelty_pass: true
+    causal_effect: 0.42147
+    causal_pass: false
+    regression_failures: 16
+    benchmark_pass: true
+    contained: true
+    contracts_pass: true
+    capability_drift: 0.0
+    assurance_renewal: 0.0
+    half_life_state: GREEN
+    half_life_pass: false
+    promoted: false
+    lineage_hash: c_196fcd62dab2c2eb
+    reasons:
+    - fitness_delta<=0.001
+    - no_causal_evidence
+    - regressions=16
+  - cid: c_25d4d3e246a4be70
+    fitness: 0.85924
+    fitness_delta: -0.06712
+    novelty_score: 0.00242
+    novelty_pass: true
+    causal_effect: 0.42007
+    causal_pass: false
+    regression_failures: 16
+    benchmark_pass: true
+    contained: true
+    contracts_pass: true
+    capability_drift: 0.0
+    assurance_renewal: 0.0
+    half_life_state: GREEN
+    half_life_pass: false
+    promoted: false
+    lineage_hash: c_25d4d3e246a4be70
+    reasons:
+    - fitness_delta<=0.001
+    - no_causal_evidence
+    - regressions=16
+  - cid: c_012618f40cf3e562
+    fitness: 0.79738
+    fitness_delta: -0.12898
+    novelty_score: 0.02615
+    novelty_pass: true
+    causal_effect: 0.3698
+    causal_pass: false
+    regression_failures: 12
+    benchmark_pass: true
+    contained: true
+    contracts_pass: true
+    capability_drift: 0.0
+    assurance_renewal: 0.0
+    half_life_state: GREEN
+    half_life_pass: false
+    promoted: false
+    lineage_hash: c_012618f40cf3e562
+    reasons:
+    - fitness_delta<=0.001
+    - no_causal_evidence
+    - regressions=12
+  - cid: c_609d28c871dc98b9
+    fitness: 0.92636
+    fitness_delta: 0.0
+    novelty_score: 0.00302
+    novelty_pass: true
+    causal_effect: 0.48859
+    causal_pass: true
+    regression_failures: 0
+    benchmark_pass: true
+    contained: true
+    contracts_pass: true
+    capability_drift: 0.0
+    assurance_renewal: 0.0
+    half_life_state: GREEN
+    half_life_pass: false
+    promoted: false
+    lineage_hash: c_609d28c871dc98b9
+    reasons:
+    - fitness_delta<=0.001
+  - cid: c_e2a02275bb6bcf6c
+    fitness: 0.49824
+    fitness_delta: -0.42812
+    novelty_score: 0.02162
+    novelty_pass: true
+    causal_effect: 0.07066
+    causal_pass: false
+    regression_failures: 18
+    benchmark_pass: false
+    contained: true
+    contracts_pass: true
+    capability_drift: 0.0
+    assurance_renewal: 0.0
+    half_life_state: GREEN
+    half_life_pass: false
+    promoted: false
+    lineage_hash: c_e2a02275bb6bcf6c
+    reasons:
+    - benchmark_below_floor
+    - fitness_delta<=0.001
+    - no_causal_evidence
+    - regressions=18
+  - cid: c_1851b8af10d40168
+    fitness: 0.61525
+    fitness_delta: -0.31111
+    novelty_score: 0.01193
+    novelty_pass: true
+    causal_effect: 0.16843
+    causal_pass: true
+    regression_failures: 18
+    benchmark_pass: true
+    contained: true
+    contracts_pass: true
+    capability_drift: 0.0
+    assurance_renewal: 0.0
+    half_life_state: GREEN
+    half_life_pass: false
+    promoted: false
+    lineage_hash: c_1851b8af10d40168
+    reasons:
+    - fitness_delta<=0.001
+    - regressions=18
+  - cid: c_1475402847f49bcc
+    fitness: 0.85369
+    fitness_delta: -0.07267
+    novelty_score: 0.0032
+    novelty_pass: true
+    causal_effect: 0.42611
+    causal_pass: true
+    regression_failures: 17
+    benchmark_pass: true
+    contained: true
+    contracts_pass: true
+    capability_drift: 0.0
+    assurance_renewal: 0.0
+    half_life_state: GREEN
+    half_life_pass: false
+    promoted: false
+    lineage_hash: c_1475402847f49bcc
+    reasons:
+    - fitness_delta<=0.001
+    - regressions=17
+  half_life_state: GREEN
+  capability_index: 0.92636
+  assurance_index: 0.318
+  population_entropy: 0.4731
+  environment:
+    envs:
+    - baseline
+    - mixed
+    - poet1
+    - poet2
+    - poet3
+    - poet5
+    qd_coverage: 0.1406
+    qd_score: 6.2582
+  notes:
+  - poet:+poet5@0.8529
+  timestamp: 1780877875.533855
+- cycle: 6
+  proposed:
+  - c_d91faf31eca34b61
+  - c_4db5408a6b59ef5f
+  - c_ce342342c975769f
+  - c_daf4340a1a60a1ce
+  - c_ad9bb787d1c165db
+  - c_6cd82eceac35bb13
+  - c_94e525d489f6d14e
+  - c_7f7e0c4872280f9f
+  - c_f2eeb266d4352c99
+  - c_609d28c871dc98b9
+  - c_ce0c3277855c44df
+  - c_e3ed874ebd62a73e
+  - c_86417073332074c3
+  - c_d28592ab6cf65cd9
+  promoted: []
+  archived:
+  - c_d91faf31eca34b61
+  - c_4db5408a6b59ef5f
+  - c_ce342342c975769f
+  - c_daf4340a1a60a1ce
+  - c_ad9bb787d1c165db
+  - c_6cd82eceac35bb13
+  - c_94e525d489f6d14e
+  - c_7f7e0c4872280f9f
+  - c_f2eeb266d4352c99
+  - c_609d28c871dc98b9
+  - c_ce0c3277855c44df
+  - c_e3ed874ebd62a73e
+  - c_86417073332074c3
+  - c_d28592ab6cf65cd9
+  gate_reports:
+  - cid: c_d91faf31eca34b61
+    fitness: 0.72355
+    fitness_delta: -0.20281
+    novelty_score: 0.02136
+    novelty_pass: true
+    causal_effect: 0.23528
+    causal_pass: false
+    regression_failures: 15
+    benchmark_pass: true
+    contained: true
+    contracts_pass: true
+    capability_drift: 0.0
+    assurance_renewal: 0.0
+    half_life_state: GREEN
+    half_life_pass: false
+    promoted: false
+    lineage_hash: c_d91faf31eca34b61
+    reasons:
+    - fitness_delta<=0.001
+    - no_causal_evidence
+    - regressions=15
+  - cid: c_4db5408a6b59ef5f
+    fitness: 0.49763
+    fitness_delta: -0.42873
+    novelty_score: 0.02478
+    novelty_pass: true
+    causal_effect: 0.00936
+    causal_pass: false
+    regression_failures: 15
+    benchmark_pass: false
+    contained: true
+    contracts_pass: true
+    capability_drift: 0.0
+    assurance_renewal: 0.0
+    half_life_state: GREEN
+    half_life_pass: false
+    promoted: false
+    lineage_hash: c_4db5408a6b59ef5f
+    reasons:
+    - benchmark_below_floor
+    - fitness_delta<=0.001
+    - no_causal_evidence
+    - regressions=15
+  - cid: c_ce342342c975769f
+    fitness: 0.63492
+    fitness_delta: -0.29144
+    novelty_score: 0.04396
+    novelty_pass: true
+    causal_effect: 0.14665
+    causal_pass: false
+    regression_failures: 15
+    benchmark_pass: true
+    contained: true
+    contracts_pass: true
+    capability_drift: 0.0
+    assurance_renewal: 0.0
+    half_life_state: GREEN
+    half_life_pass: false
+    promoted: false
+    lineage_hash: c_ce342342c975769f
+    reasons:
+    - fitness_delta<=0.001
+    - no_causal_evidence
+    - regressions=15
+  - cid: c_daf4340a1a60a1ce
+    fitness: 0.50734
+    fitness_delta: -0.41902
+    novelty_score: 0.027
+    novelty_pass: true
+    causal_effect: 0.01907
+    causal_pass: false
+    regression_failures: 15
+    benchmark_pass: true
+    contained: true
+    contracts_pass: true
+    capability_drift: 0.0
+    assurance_renewal: 0.0
+    half_life_state: GREEN
+    half_life_pass: false
+    promoted: false
+    lineage_hash: c_daf4340a1a60a1ce
+    reasons:
+    - fitness_delta<=0.001
+    - no_causal_evidence
+    - regressions=15
+  - cid: c_ad9bb787d1c165db
+    fitness: 0.72335
+    fitness_delta: -0.20301
+    novelty_score: 0.02132
+    novelty_pass: true
+    causal_effect: 0.23508
+    causal_pass: false
+    regression_failures: 15
+    benchmark_pass: true
+    contained: true
+    contracts_pass: true
+    capability_drift: 0.0
+    assurance_renewal: 0.0
+    half_life_state: GREEN
+    half_life_pass: false
+    promoted: false
+    lineage_hash: c_ad9bb787d1c165db
+    reasons:
+    - fitness_delta<=0.001
+    - no_causal_evidence
+    - regressions=15
+  - cid: c_6cd82eceac35bb13
+    fitness: 0.78847
+    fitness_delta: -0.13789
+    novelty_score: 0.02993
+    novelty_pass: true
+    causal_effect: 0.11775
+    causal_pass: true
+    regression_failures: 15
+    benchmark_pass: true
+    contained: true
+    contracts_pass: true
+    capability_drift: 0.0
+    assurance_renewal: 0.0
+    half_life_state: GREEN
+    half_life_pass: false
+    promoted: false
+    lineage_hash: c_6cd82eceac35bb13
+    reasons:
+    - fitness_delta<=0.001
+    - regressions=15
+  - cid: c_94e525d489f6d14e
+    fitness: 0.89804
+    fitness_delta: -0.02832
+    novelty_score: 0.01619
+    novelty_pass: true
+    causal_effect: 0.3966
+    causal_pass: false
+    regression_failures: 5
+    benchmark_pass: true
+    contained: true
+    contracts_pass: true
+    capability_drift: 0.0
+    assurance_renewal: 0.0
+    half_life_state: GREEN
+    half_life_pass: false
+    promoted: false
+    lineage_hash: c_94e525d489f6d14e
+    reasons:
+    - fitness_delta<=0.001
+    - no_causal_evidence
+    - regressions=5
+  - cid: c_7f7e0c4872280f9f
+    fitness: 0.89804
+    fitness_delta: -0.02832
+    novelty_score: 0.01619
+    novelty_pass: true
+    causal_effect: 0.40907
+    causal_pass: false
+    regression_failures: 5
+    benchmark_pass: true
+    contained: true
+    contracts_pass: true
+    capability_drift: 0.0
+    assurance_renewal: 0.0
+    half_life_state: GREEN
+    half_life_pass: false
+    promoted: false
+    lineage_hash: c_7f7e0c4872280f9f
+    reasons:
+    - fitness_delta<=0.001
+    - no_causal_evidence
+    - regressions=5
+  - cid: c_f2eeb266d4352c99
+    fitness: 0.89966
+    fitness_delta: -0.0267
+    novelty_score: 0.01661
+    novelty_pass: true
+    causal_effect: 0.40889
+    causal_pass: false
+    regression_failures: 5
+    benchmark_pass: true
+    contained: true
+    contracts_pass: true
+    capability_drift: 0.0
+    assurance_renewal: 0.0
+    half_life_state: GREEN
+    half_life_pass: false
+    promoted: false
+    lineage_hash: c_f2eeb266d4352c99
+    reasons:
+    - fitness_delta<=0.001
+    - no_causal_evidence
+    - regressions=5
+  - cid: c_609d28c871dc98b9
+    fitness: 0.92636
+    fitness_delta: 0.0
+    novelty_score: 0.00302
+    novelty_pass: true
+    causal_effect: 0.42529
+    causal_pass: true
+    regression_failures: 0
+    benchmark_pass: true
+    contained: true
+    contracts_pass: true
+    capability_drift: 0.0
+    assurance_renewal: 0.0
+    half_life_state: GREEN
+    half_life_pass: false
+    promoted: false
+    lineage_hash: c_609d28c871dc98b9
+    reasons:
+    - fitness_delta<=0.001
+  - cid: c_ce0c3277855c44df
+    fitness: 0.83709
+    fitness_delta: -0.08927
+    novelty_score: 0.01545
+    novelty_pass: true
+    causal_effect: 0.32617
+    causal_pass: false
+    regression_failures: 15
+    benchmark_pass: true
+    contained: true
+    contracts_pass: true
+    capability_drift: 0.0
+    assurance_renewal: 0.0
+    half_life_state: GREEN
+    half_life_pass: false
+    promoted: false
+    lineage_hash: c_ce0c3277855c44df
+    reasons:
+    - fitness_delta<=0.001
+    - no_causal_evidence
+    - regressions=15
+  - cid: c_e3ed874ebd62a73e
+    fitness: 0.48827
+    fitness_delta: -0.43809
+    novelty_score: 0.02623
+    novelty_pass: true
+    causal_effect: 0.0
+    causal_pass: false
+    regression_failures: 15
+    benchmark_pass: false
+    contained: true
+    contracts_pass: true
+    capability_drift: 0.0
+    assurance_renewal: 0.0
+    half_life_state: GREEN
+    half_life_pass: false
+    promoted: false
+    lineage_hash: c_e3ed874ebd62a73e
+    reasons:
+    - benchmark_below_floor
+    - fitness_delta<=0.001
+    - no_causal_evidence
+    - regressions=15
+  - cid: c_86417073332074c3
+    fitness: 0.83709
+    fitness_delta: -0.08927
+    novelty_score: 0.01545
+    novelty_pass: true
+    causal_effect: 0.31198
+    causal_pass: true
+    regression_failures: 15
+    benchmark_pass: true
+    contained: true
+    contracts_pass: true
+    capability_drift: 0.0
+    assurance_renewal: 0.0
+    half_life_state: GREEN
+    half_life_pass: false
+    promoted: false
+    lineage_hash: c_86417073332074c3
+    reasons:
+    - fitness_delta<=0.001
+    - regressions=15
+  - cid: c_d28592ab6cf65cd9
+    fitness: 0.83709
+    fitness_delta: -0.08927
+    novelty_score: 0.01545
+    novelty_pass: true
+    causal_effect: 0.33602
+    causal_pass: false
+    regression_failures: 15
+    benchmark_pass: true
+    contained: true
+    contracts_pass: true
+    capability_drift: 0.0
+    assurance_renewal: 0.0
+    half_life_state: GREEN
+    half_life_pass: false
+    promoted: false
+    lineage_hash: c_d28592ab6cf65cd9
+    reasons:
+    - fitness_delta<=0.001
+    - no_causal_evidence
+    - regressions=15
+  half_life_state: GREEN
+  capability_index: 0.89804
+  assurance_index: 0.38024
+  population_entropy: 0.5066
+  environment:
+    envs:
+    - baseline
+    - mixed
+    - poet1
+    - poet2
+    - poet3
+    - poet5
+    qd_coverage: 0.1562
+    qd_score: 7.3404
+  notes:
+  - "scientist:supported (\u0394=+0.3970)"
+  timestamp: 1780877876.1379442
+- cycle: 7
+  proposed:
+  - c_9377f98be9f809bb
+  - c_e9341ad16b203226
+  - c_32094d98e1b4637e
+  - c_762e55508e2fff3e
+  - c_42a26274332fee1c
+  - c_8167f8b34e509c64
+  - c_ffccf6fdad1601db
+  - c_c044032da8555293
+  - c_40c0e7e7b40e0a50
+  - c_609d28c871dc98b9
+  - c_a3b2fa59fb2e6295
+  - c_e3aa3b188f343282
+  - c_680c981bb023bab0
+  promoted: []
+  archived:
+  - c_9377f98be9f809bb
+  - c_e9341ad16b203226
+  - c_32094d98e1b4637e
+  - c_762e55508e2fff3e
+  - c_42a26274332fee1c
+  - c_8167f8b34e509c64
+  - c_ffccf6fdad1601db
+  - c_c044032da8555293
+  - c_40c0e7e7b40e0a50
+  - c_609d28c871dc98b9
+  - c_a3b2fa59fb2e6295
+  - c_e3aa3b188f343282
+  - c_680c981bb023bab0
+  gate_reports:
+  - cid: c_9377f98be9f809bb
+    fitness: 0.8963
+    fitness_delta: -0.03006
+    novelty_score: 0.00132
+    novelty_pass: true
+    causal_effect: 0.3971
+    causal_pass: true
+    regression_failures: 6
+    benchmark_pass: true
+    contained: true
+    contracts_pass: true
+    capability_drift: 0.0
+    assurance_renewal: 0.0
+    half_life_state: GREEN
+    half_life_pass: false
+    promoted: false
+    lineage_hash: c_9377f98be9f809bb
+    reasons:
+    - fitness_delta<=0.001
+    - regressions=6
+  - cid: c_e9341ad16b203226
+    fitness: 0.83709
+    fitness_delta: -0.08927
+    novelty_score: 0.0
+    novelty_pass: true
+    causal_effect: 0.01292
+    causal_pass: false
+    regression_failures: 15
+    benchmark_pass: true
+    contained: true
+    contracts_pass: true
+    capability_drift: 0.0
+    assurance_renewal: 0.0
+    half_life_state: GREEN
+    half_life_pass: false
+    promoted: false
+    lineage_hash: c_e9341ad16b203226
+    reasons:
+    - fitness_delta<=0.001
+    - no_causal_evidence
+    - regressions=15
+  - cid: c_32094d98e1b4637e
+    fitness: 0.72166
+    fitness_delta: -0.2047
+    novelty_score: 0.01231
+    novelty_pass: true
+    causal_effect: 0.23339
+    causal_pass: false
+    regression_failures: 15
+    benchmark_pass: true
+    contained: true
+    contracts_pass: true
+    capability_drift: 0.0
+    assurance_renewal: 0.0
+    half_life_state: GREEN
+    half_life_pass: false
+    promoted: false
+    lineage_hash: c_32094d98e1b4637e
+    reasons:
+    - fitness_delta<=0.001
+    - no_causal_evidence
+    - regressions=15
+  - cid: c_762e55508e2fff3e
+    fitness: 0.89966
+    fitness_delta: -0.0267
+    novelty_score: 0.00076
+    novelty_pass: true
+    causal_effect: 0.40889
+    causal_pass: true
+    regression_failures: 5
+    benchmark_pass: true
+    contained: true
+    contracts_pass: true
+    capability_drift: 0.0
+    assurance_renewal: 0.0
+    half_life_state: GREEN
+    half_life_pass: false
+    promoted: false
+    lineage_hash: c_762e55508e2fff3e
+    reasons:
+    - fitness_delta<=0.001
+    - regressions=5
+  - cid: c_42a26274332fee1c
+    fitness: 0.62985
+    fitness_delta: -0.29651
+    novelty_score: 0.03499
+    novelty_pass: true
+    causal_effect: 0.14158
+    causal_pass: true
+    regression_failures: 15
+    benchmark_pass: true
+    contained: true
+    contracts_pass: true
+    capability_drift: 0.0
+    assurance_renewal: 0.0
+    half_life_state: GREEN
+    half_life_pass: false
+    promoted: false
+    lineage_hash: c_42a26274332fee1c
+    reasons:
+    - fitness_delta<=0.001
+    - regressions=15
+  - cid: c_8167f8b34e509c64
+    fitness: 0.83709
+    fitness_delta: -0.08927
+    novelty_score: 0.0
+    novelty_pass: true
+    causal_effect: 0.34882
+    causal_pass: false
+    regression_failures: 15
+    benchmark_pass: true
+    contained: true
+    contracts_pass: true
+    capability_drift: 0.0
+    assurance_renewal: 0.0
+    half_life_state: GREEN
+    half_life_pass: false
+    promoted: false
+    lineage_hash: c_8167f8b34e509c64
+    reasons:
+    - fitness_delta<=0.001
+    - no_causal_evidence
+    - regressions=15
+  - cid: c_ffccf6fdad1601db
+    fitness: 0.79014
+    fitness_delta: -0.13622
+    novelty_score: 0.01569
+    novelty_pass: true
+    causal_effect: 0.30187
+    causal_pass: false
+    regression_failures: 14
+    benchmark_pass: true
+    contained: true
+    contracts_pass: true
+    capability_drift: 0.0
+    assurance_renewal: 0.0
+    half_life_state: GREEN
+    half_life_pass: false
+    promoted: false
+    lineage_hash: c_ffccf6fdad1601db
+    reasons:
+    - fitness_delta<=0.001
+    - no_causal_evidence
+    - regressions=14
+  - cid: c_c044032da8555293
+    fitness: 0.89804
+    fitness_delta: -0.02832
+    novelty_score: 0.00051
+    novelty_pass: true
+    causal_effect: 0.37105
+    causal_pass: false
+    regression_failures: 5
+    benchmark_pass: true
+    contained: true
+    contracts_pass: true
+    capability_drift: 0.0
+    assurance_renewal: 0.0
+    half_life_state: GREEN
+    half_life_pass: false
+    promoted: false
+    lineage_hash: c_c044032da8555293
+    reasons:
+    - fitness_delta<=0.001
+    - no_causal_evidence
+    - regressions=5
+  - cid: c_40c0e7e7b40e0a50
+    fitness: 0.83709
+    fitness_delta: -0.08927
+    novelty_score: 0.0
+    novelty_pass: true
+    causal_effect: 0.34882
+    causal_pass: false
+    regression_failures: 15
+    benchmark_pass: true
+    contained: true
+    contracts_pass: true
+    capability_drift: 0.0
+    assurance_renewal: 0.0
+    half_life_state: GREEN
+    half_life_pass: false
+    promoted: false
+    lineage_hash: c_40c0e7e7b40e0a50
+    reasons:
+    - fitness_delta<=0.001
+    - no_causal_evidence
+    - regressions=15
+  - cid: c_609d28c871dc98b9
+    fitness: 0.92636
+    fitness_delta: 0.0
+    novelty_score: 0.00302
+    novelty_pass: true
+    causal_effect: 0.42529
+    causal_pass: true
+    regression_failures: 0
+    benchmark_pass: true
+    contained: true
+    contracts_pass: true
+    capability_drift: 0.0
+    assurance_renewal: 0.0
+    half_life_state: GREEN
+    half_life_pass: false
+    promoted: false
+    lineage_hash: c_609d28c871dc98b9
+    reasons:
+    - fitness_delta<=0.001
+  - cid: c_a3b2fa59fb2e6295
+    fitness: 0.75533
+    fitness_delta: -0.17103
+    novelty_score: 0.01927
+    novelty_pass: true
+    causal_effect: 0.26706
+    causal_pass: false
+    regression_failures: 15
+    benchmark_pass: true
+    contained: true
+    contracts_pass: true
+    capability_drift: 0.0
+    assurance_renewal: 0.0
+    half_life_state: GREEN
+    half_life_pass: false
+    promoted: false
+    lineage_hash: c_a3b2fa59fb2e6295
+    reasons:
+    - fitness_delta<=0.001
+    - no_causal_evidence
+    - regressions=15
+  - cid: c_e3aa3b188f343282
+    fitness: 0.77115
+    fitness_delta: -0.15521
+    novelty_score: 0.01323
+    novelty_pass: true
+    causal_effect: 0.28288
+    causal_pass: false
+    regression_failures: 15
+    benchmark_pass: true
+    contained: true
+    contracts_pass: true
+    capability_drift: 0.0
+    assurance_renewal: 0.0
+    half_life_state: GREEN
+    half_life_pass: false
+    promoted: false
+    lineage_hash: c_e3aa3b188f343282
+    reasons:
+    - fitness_delta<=0.001
+    - no_causal_evidence
+    - regressions=15
+  - cid: c_680c981bb023bab0
+    fitness: 0.83709
+    fitness_delta: -0.08927
+    novelty_score: 0.0
+    novelty_pass: true
+    causal_effect: 0.31524
+    causal_pass: false
+    regression_failures: 15
+    benchmark_pass: true
+    contained: true
+    contracts_pass: true
+    capability_drift: 0.0
+    assurance_renewal: 0.0
+    half_life_state: GREEN
+    half_life_pass: false
+    promoted: false
+    lineage_hash: c_680c981bb023bab0
+    reasons:
+    - fitness_delta<=0.001
+    - no_causal_evidence
+    - regressions=15
+  half_life_state: GREEN
+  capability_index: 0.89804
+  assurance_index: 0.43852
+  population_entropy: 0.5225
+  environment:
+    envs:
+    - mixed
+    - poet1
+    - poet2
+    - poet3
+    - poet5
+    - poet7
+    qd_coverage: 0.1719
+    qd_score: 8.1433
+  notes:
+  - poet:+poet7@0.875
+  timestamp: 1780877876.806975
+- cycle: 8
+  proposed:
+  - c_895a71cfe4734568
+  - c_d6f00b3061bdc984
+  - c_12c4b9d31b0d60d0
+  - c_06189e0c19ec8258
+  - c_9c63e6a39835b6cb
+  - c_18d7f2673c54edd1
+  - c_8ffc4155e4783cff
+  - c_832ca8f9220fd7d9
+  - c_0a1fb26f96f520af
+  - c_609d28c871dc98b9
+  - c_3385cee80f3dba18
+  - c_f9c567259ad08b62
+  - c_2761734131a139f5
+  - c_d28592ab6cf65cd9
+  promoted: []
+  archived:
+  - c_895a71cfe4734568
+  - c_d6f00b3061bdc984
+  - c_12c4b9d31b0d60d0
+  - c_06189e0c19ec8258
+  - c_9c63e6a39835b6cb
+  - c_18d7f2673c54edd1
+  - c_8ffc4155e4783cff
+  - c_832ca8f9220fd7d9
+  - c_0a1fb26f96f520af
+  - c_609d28c871dc98b9
+  - c_3385cee80f3dba18
+  - c_f9c567259ad08b62
+  - c_2761734131a139f5
+  - c_d28592ab6cf65cd9
+  gate_reports:
+  - cid: c_895a71cfe4734568
+    fitness: 0.8309
+    fitness_delta: -0.09546
+    novelty_score: 0.00619
+    novelty_pass: true
+    causal_effect: 0.31634
+    causal_pass: false
+    regression_failures: 11
+    benchmark_pass: true
+    contained: true
+    contracts_pass: true
+    capability_drift: 0.0
+    assurance_renewal: 0.0
+    half_life_state: GREEN
+    half_life_pass: false
+    promoted: false
+    lineage_hash: c_895a71cfe4734568
+    reasons:
+    - fitness_delta<=0.001
+    - no_causal_evidence
+    - regressions=11
+  - cid: c_d6f00b3061bdc984
+    fitness: 0.69451
+    fitness_delta: -0.23185
+    novelty_score: 0.02259
+    novelty_pass: true
+    causal_effect: 0.17345
+    causal_pass: true
+    regression_failures: 12
+    benchmark_pass: true
+    contained: true
+    contracts_pass: true
+    capability_drift: 0.0
+    assurance_renewal: 0.0
+    half_life_state: GREEN
+    half_life_pass: false
+    promoted: false
+    lineage_hash: c_d6f00b3061bdc984
+    reasons:
+    - fitness_delta<=0.001
+    - regressions=12
+  - cid: c_12c4b9d31b0d60d0
+    fitness: 0.73151
+    fitness_delta: -0.19485
+    novelty_score: 0.01315
+    novelty_pass: true
+    causal_effect: 0.11056
+    causal_pass: true
+    regression_failures: 12
+    benchmark_pass: true
+    contained: true
+    contracts_pass: true
+    capability_drift: 0.0
+    assurance_renewal: 0.0
+    half_life_state: GREEN
+    half_life_pass: false
+    promoted: false
+    lineage_hash: c_12c4b9d31b0d60d0
+    reasons:
+    - fitness_delta<=0.001
+    - regressions=12
+  - cid: c_06189e0c19ec8258
+    fitness: 0.73349
+    fitness_delta: -0.19287
+    novelty_score: 0.01274
+    novelty_pass: true
+    causal_effect: 0.21893
+    causal_pass: false
+    regression_failures: 12
+    benchmark_pass: true
+    contained: true
+    contracts_pass: true
+    capability_drift: 0.0
+    assurance_renewal: 0.0
+    half_life_state: GREEN
+    half_life_pass: false
+    promoted: false
+    lineage_hash: c_06189e0c19ec8258
+    reasons:
+    - fitness_delta<=0.001
+    - no_causal_evidence
+    - regressions=12
+  - cid: c_9c63e6a39835b6cb
+    fitness: 0.67006
+    fitness_delta: -0.2563
+    novelty_score: 0.02271
+    novelty_pass: true
+    causal_effect: 0.14328
+    causal_pass: false
+    regression_failures: 12
+    benchmark_pass: true
+    contained: true
+    contracts_pass: true
+    capability_drift: 0.0
+    assurance_renewal: 0.0
+    half_life_state: GREEN
+    half_life_pass: false
+    promoted: false
+    lineage_hash: c_9c63e6a39835b6cb
+    reasons:
+    - fitness_delta<=0.001
+    - no_causal_evidence
+    - regressions=12
+  - cid: c_18d7f2673c54edd1
+    fitness: 0.64435
+    fitness_delta: -0.28201
+    novelty_score: 0.02511
+    novelty_pass: true
+    causal_effect: 0.12979
+    causal_pass: false
+    regression_failures: 12
+    benchmark_pass: true
+    contained: true
+    contracts_pass: true
+    capability_drift: 0.0
+    assurance_renewal: 0.0
+    half_life_state: GREEN
+    half_life_pass: false
+    promoted: false
+    lineage_hash: c_18d7f2673c54edd1
+    reasons:
+    - fitness_delta<=0.001
+    - no_causal_evidence
+    - regressions=12
+  - cid: c_8ffc4155e4783cff
+    fitness: 0.83353
+    fitness_delta: -0.09283
+    novelty_score: 0.00502
+    novelty_pass: true
+    causal_effect: 0.29839
+    causal_pass: false
+    regression_failures: 11
+    benchmark_pass: true
+    contained: true
+    contracts_pass: true
+    capability_drift: 0.0
+    assurance_renewal: 0.0
+    half_life_state: GREEN
+    half_life_pass: false
+    promoted: false
+    lineage_hash: c_8ffc4155e4783cff
+    reasons:
+    - fitness_delta<=0.001
+    - no_causal_evidence
+    - regressions=11
+  - cid: c_832ca8f9220fd7d9
+    fitness: 0.8908
+    fitness_delta: -0.03556
+    novelty_score: 0.0148
+    novelty_pass: true
+    causal_effect: 0.32181
+    causal_pass: false
+    regression_failures: 8
+    benchmark_pass: true
+    contained: true
+    contracts_pass: true
+    capability_drift: 0.0
+    assurance_renewal: 0.0
+    half_life_state: GREEN
+    half_life_pass: false
+    promoted: false
+    lineage_hash: c_832ca8f9220fd7d9
+    reasons:
+    - fitness_delta<=0.001
+    - no_causal_evidence
+    - regressions=8
+  - cid: c_0a1fb26f96f520af
+    fitness: 0.83353
+    fitness_delta: -0.09283
+    novelty_score: 0.00502
+    novelty_pass: true
+    causal_effect: 0.26269
+    causal_pass: false
+    regression_failures: 11
+    benchmark_pass: true
+    contained: true
+    contracts_pass: true
+    capability_drift: 0.0
+    assurance_renewal: 0.0
+    half_life_state: GREEN
+    half_life_pass: false
+    promoted: false
+    lineage_hash: c_0a1fb26f96f520af
+    reasons:
+    - fitness_delta<=0.001
+    - no_causal_evidence
+    - regressions=11
+  - cid: c_609d28c871dc98b9
+    fitness: 0.92636
+    fitness_delta: 0.0
+    novelty_score: 0.00302
+    novelty_pass: true
+    causal_effect: 0.39004
+    causal_pass: true
+    regression_failures: 0
+    benchmark_pass: true
+    contained: true
+    contracts_pass: true
+    capability_drift: 0.0
+    assurance_renewal: 0.0
+    half_life_state: GREEN
+    half_life_pass: false
+    promoted: false
+    lineage_hash: c_609d28c871dc98b9
+    reasons:
+    - fitness_delta<=0.001
+  - cid: c_3385cee80f3dba18
+    fitness: 0.70696
+    fitness_delta: -0.2194
+    novelty_score: 0.01964
+    novelty_pass: true
+    causal_effect: 0.17759
+    causal_pass: true
+    regression_failures: 12
+    benchmark_pass: true
+    contained: true
+    contracts_pass: true
+    capability_drift: 0.0
+    assurance_renewal: 0.0
+    half_life_state: GREEN
+    half_life_pass: false
+    promoted: false
+    lineage_hash: c_3385cee80f3dba18
+    reasons:
+    - fitness_delta<=0.001
+    - regressions=12
+  - cid: c_f9c567259ad08b62
+    fitness: 0.83353
+    fitness_delta: -0.09283
+    novelty_score: 0.00502
+    novelty_pass: true
+    causal_effect: 0.05903
+    causal_pass: true
+    regression_failures: 11
+    benchmark_pass: true
+    contained: true
+    contracts_pass: true
+    capability_drift: 0.0
+    assurance_renewal: 0.0
+    half_life_state: GREEN
+    half_life_pass: false
+    promoted: false
+    lineage_hash: c_f9c567259ad08b62
+    reasons:
+    - fitness_delta<=0.001
+    - regressions=11
+  - cid: c_2761734131a139f5
+    fitness: 0.89063
+    fitness_delta: -0.03573
+    novelty_score: 0.01485
+    novelty_pass: true
+    causal_effect: 0.06354
+    causal_pass: true
+    regression_failures: 7
+    benchmark_pass: true
+    contained: true
+    contracts_pass: true
+    capability_drift: 0.0
+    assurance_renewal: 0.0
+    half_life_state: GREEN
+    half_life_pass: false
+    promoted: false
+    lineage_hash: c_2761734131a139f5
+    reasons:
+    - fitness_delta<=0.001
+    - regressions=7
+  - cid: c_d28592ab6cf65cd9
+    fitness: 0.83709
+    fitness_delta: -0.08927
+    novelty_score: 0.0
+    novelty_pass: true
+    causal_effect: 0.30077
+    causal_pass: false
+    regression_failures: 15
+    benchmark_pass: true
+    contained: true
+    contracts_pass: true
+    capability_drift: 0.0
+    assurance_renewal: 0.0
+    half_life_state: GREEN
+    half_life_pass: false
+    promoted: false
+    lineage_hash: c_d28592ab6cf65cd9
+    reasons:
+    - fitness_delta<=0.001
+    - no_causal_evidence
+    - regressions=15
+  half_life_state: GREEN
+  capability_index: 0.89063
+  assurance_index: 0.50076
+  population_entropy: 0.5325
+  environment:
+    envs:
+    - poet1
+    - poet2
+    - poet3
+    - poet5
+    - poet7
+    - poet8
+    qd_coverage: 0.1875
+    qd_score: 8.8133
+  notes:
+  - "scientist:supported (\u0394=+0.3543)"
+  - poet:+poet8@0.8286
+  timestamp: 1780877877.3836744
+successor_registry:
+  champion: c_78a48a5ad711b0ab
+  champion_fitness: 0.92636
+  n_promotions: 3
+  promotions:
+  - candidate:
+      cid: c_656f0785b7a2c44d
+      source: "def place(item, bins, capacity):\n    best_idx = -1\n    best_score\
+        \ = -1e18\n    for i in range(len(bins)):\n        load = bins[i]\n      \
+        \  residual = capacity - (load + item)\n        if residual < 0:\n       \
+        \     continue\n        score = (0.0) * (-residual) \\\n              + (1.0)\
+        \ * (capacity - load) \\\n              + (0.0) * load \\\n              +\
+        \ (0.0) * ((load + item) / capacity)\n        if score > best_score:\n   \
+        \         best_score = score\n            best_idx = i\n    if best_idx ==\
+        \ -1 or best_score < (40.0):\n        return -1\n    return best_idx\n"
+      genome:
+        w_residual: 0.0
+        w_remaining: 1.0
+        w_load: 0.0
+        w_tight: 0.0
+        new_bin_bias: 40.0
+        tie: first
+      parents: []
+      generation: 0
+      origin: seed
+      meta:
+        fitness: 0.79785
+    result:
+      cid: c_656f0785b7a2c44d
+      valid: true
+      fitness: 0.79785
+      per_task:
+        easy#0: 0.8333333333333334
+        easy#1: 0.8333333333333334
+        easy#2: 0.8181818181818182
+        baseline#0: 0.78125
+        baseline#1: 0.7666666666666667
+        baseline#2: 0.8064516129032258
+        mixed#0: 0.7894736842105263
+        mixed#1: 0.7804878048780488
+        mixed#2: 0.7714285714285715
+      runtime_ms: 33.93
+      behavior:
+      - 0.7696
+      - 0.4806
+      violation_rate: 0.0
+      static_ok: true
+      static_report:
+        ok: true
+        issues: []
+        nodes: 140
+        defines_place: true
+      quorum:
+        static: true
+        contained: true
+        contracts: true
+        benchmark: true
+      error: null
+    report: null
+    kind: seed
+  - candidate:
+      cid: c_033c4294c3d444ff
+      source: "def place(item, bins, capacity):\n    best_idx = -1\n    best_score\
+        \ = -1e18\n    for i in range(len(bins)):\n        load = bins[i]\n      \
+        \  residual = capacity - (load + item)\n        if residual < 0:\n       \
+        \     continue\n        score = (0.0147) * (-residual) \\\n              +\
+        \ (0.7159) * (capacity - load) \\\n              + (0.2703) * load \\\n  \
+        \            + (1.0658) * ((load + item) / capacity)\n        if score > best_score:\n\
+        \            best_score = score\n            best_idx = i\n    if best_idx\
+        \ == -1 or best_score < (37.9889):\n        return -1\n    return best_idx\n"
+      genome:
+        w_residual: 0.0147
+        w_remaining: 0.7159
+        w_load: 0.2703
+        w_tight: 1.0658
+        new_bin_bias: 37.9889
+        tie: first
+      parents:
+      - c_c8eb48d5df966a3d
+      - c_0f2cc00ec5ff5664
+      generation: 4
+      origin: mutation
+      meta:
+        fitness: 0.84747
+    result:
+      cid: c_033c4294c3d444ff
+      valid: true
+      fitness: 0.84747
+      per_task:
+        easy#0: 0.9
+        easy#1: 0.9090909090909091
+        easy#2: 0.9090909090909091
+        baseline#0: 0.896551724137931
+        baseline#1: 0.8666666666666667
+        baseline#2: 0.8571428571428571
+        mixed#0: 0.8108108108108109
+        mixed#1: 0.8709677419354839
+        mixed#2: 0.8787878787878788
+        poet1#0: 0.7941176470588235
+        poet1#1: 0.8421052631578947
+        poet1#2: 0.7894736842105263
+        poet2#0: 0.8055555555555556
+        poet2#1: 0.84375
+        poet2#2: 0.7631578947368421
+        poet3#0: 0.813953488372093
+        poet3#1: 0.8461538461538461
+        poet3#2: 0.8571428571428571
+      runtime_ms: 27.42
+      behavior:
+      - 0.8287
+      - 0.5097
+      violation_rate: 0.0
+      static_ok: true
+      static_report:
+        ok: true
+        issues: []
+        nodes: 140
+        defines_place: true
+      quorum:
+        static: true
+        contained: true
+        contracts: true
+        benchmark: true
+      error: null
+    report:
+      cid: c_033c4294c3d444ff
+      fitness: 0.84747
+      fitness_delta: 0.04962
+      novelty_score: 0.0235
+      novelty_pass: true
+      causal_effect: 0.41989
+      causal_pass: true
+      regression_failures: 0
+      benchmark_pass: true
+      contained: true
+      contracts_pass: true
+      capability_drift: 0.07561
+      assurance_renewal: 0.2282
+      half_life_state: GREEN
+      half_life_pass: true
+      promoted: true
+      lineage_hash: c_033c4294c3d444ff
+      reasons:
+      - all_gates_passed
+    kind: promotion
+  - candidate:
+      cid: c_348c81bbd9c95e03
+      source: "def place(item, bins, capacity):\n    best_idx = -1\n    best_score\
+        \ = -1e18\n    for i in range(len(bins)):\n        load = bins[i]\n      \
+        \  residual = capacity - (load + item)\n        if residual < 0:\n       \
+        \     continue\n        score = (0.769) * (-residual) \\\n              +\
+        \ (1.0) * (capacity - load) \\\n              + (0.5007) * load \\\n     \
+        \         + (0.0) * ((load + item) / capacity)\n        if score > best_score:\n\
+        \            best_score = score\n            best_idx = i\n    if best_idx\
+        \ == -1 or best_score < (42.8061):\n        return -1\n    return best_idx\n"
+      genome:
+        w_residual: 0.769
+        w_remaining: 1.0
+        w_load: 0.5007
+        w_tight: 0.0
+        new_bin_bias: 42.8061
+        tie: first
+      parents:
+      - c_3b533650951f2606
+      - c_0f2cc00ec5ff5664
+      generation: 4
+      origin: mutation
+      meta:
+        design: conservative
+        fitness: 0.92081
+    result:
+      cid: c_348c81bbd9c95e03
+      valid: true
+      fitness: 0.92081
+      per_task:
+        easy#0: 0.9
+        easy#1: 1.0
+        easy#2: 1.0
+        baseline#0: 0.9285714285714286
+        baseline#1: 0.9285714285714286
+        baseline#2: 0.9230769230769231
+        mixed#0: 0.8823529411764706
+        mixed#1: 0.9310344827586207
+        mixed#2: 0.9354838709677419
+        poet1#0: 0.9
+        poet1#1: 0.9696969696969697
+        poet1#2: 0.8823529411764706
+        poet2#0: 0.8529411764705882
+        poet2#1: 0.9
+        poet2#2: 0.8285714285714286
+        poet3#0: 0.9459459459459459
+        poet3#1: 0.9428571428571428
+        poet3#2: 0.9230769230769231
+      runtime_ms: 27.17
+      behavior:
+      - 0.9005
+      - 0.4687
+      violation_rate: 0.0
+      static_ok: true
+      static_report:
+        ok: true
+        issues: []
+        nodes: 140
+        defines_place: true
+      quorum:
+        static: true
+        contained: true
+        contracts: true
+        benchmark: true
+      error: null
+    report:
+      cid: c_348c81bbd9c95e03
+      fitness: 0.92081
+      fitness_delta: 0.07334
+      novelty_score: 0.0107
+      novelty_pass: true
+      causal_effect: 0.49183
+      causal_pass: true
+      regression_failures: 0
+      benchmark_pass: true
+      contained: true
+      contracts_pass: true
+      capability_drift: 0.07334
+      assurance_renewal: 0.19153
+      half_life_state: GREEN
+      half_life_pass: true
+      promoted: true
+      lineage_hash: c_348c81bbd9c95e03
+      reasons:
+      - all_gates_passed
+    kind: promotion
+  - candidate:
+      cid: c_78a48a5ad711b0ab
+      source: "def place(item, bins, capacity):\n    best_idx = -1\n    best_score\
+        \ = -1e18\n    for i in range(len(bins)):\n        load = bins[i]\n      \
+        \  residual = capacity - (load + item)\n        if residual < 0:\n       \
+        \     continue\n        score = (0.6973) * (-residual) \\\n              +\
+        \ (1.0) * (capacity - load) \\\n              + (0.5007) * load \\\n     \
+        \         + (0.0) * ((load + item) / capacity)\n        if score >= best_score:\n\
+        \            best_score = score\n            best_idx = i\n    if best_idx\
+        \ == -1 or best_score < (40.0):\n        return -1\n    return best_idx\n"
+      genome:
+        w_residual: 0.6973
+        w_remaining: 1.0
+        w_load: 0.5007
+        w_tight: 0.0
+        new_bin_bias: 40.0
+        tie: last
+      parents:
+      - c_0f2cc00ec5ff5664
+      generation: 4
+      origin: mutation
+      meta:
+        design: conservative
+        fitness: 0.92636
+    result:
+      cid: c_78a48a5ad711b0ab
+      valid: true
+      fitness: 0.92636
+      per_task:
+        easy#0: 1.0
+        easy#1: 1.0
+        easy#2: 1.0
+        baseline#0: 0.9285714285714286
+        baseline#1: 0.9285714285714286
+        baseline#2: 0.9230769230769231
+        mixed#0: 0.8823529411764706
+        mixed#1: 0.9310344827586207
+        mixed#2: 0.9354838709677419
+        poet1#0: 0.9
+        poet1#1: 0.9696969696969697
+        poet1#2: 0.8823529411764706
+        poet2#0: 0.8529411764705882
+        poet2#1: 0.9
+        poet2#2: 0.8285714285714286
+        poet3#0: 0.9459459459459459
+        poet3#1: 0.9428571428571428
+        poet3#2: 0.9230769230769231
+      runtime_ms: 26.55
+      behavior:
+      - 0.9058
+      - 0.4673
+      violation_rate: 0.0
+      static_ok: true
+      static_report:
+        ok: true
+        issues: []
+        nodes: 140
+        defines_place: true
+      quorum:
+        static: true
+        contained: true
+        contracts: true
+        benchmark: true
+      error: null
+    report:
+      cid: c_78a48a5ad711b0ab
+      fitness: 0.92636
+      fitness_delta: 0.00555
+      novelty_score: 0.00992
+      novelty_pass: true
+      causal_effect: 0.48859
+      causal_pass: true
+      regression_failures: 0
+      benchmark_pass: true
+      contained: true
+      contracts_pass: true
+      capability_drift: 0.00555
+      assurance_renewal: 0.18875
+      half_life_state: GREEN
+      half_life_pass: true
+      promoted: true
+      lineage_hash: c_78a48a5ad711b0ab
+      reasons:
+      - all_gates_passed
+    kind: promotion
+qd_archive:
+  grid: 8
+  dims: 2
+  coverage: 0.1875
+  qd_score: 8.8133
+  cells:
+    6,3:
+      cid: c_3b533650951f2606
+      fitness: 0.89209
+      behavior:
+      - 0.8684
+      - 0.4352
+      origin: mutation
+    5,4:
+      cid: c_c8eb48d5df966a3d
+      fitness: 0.75554
+      behavior:
+      - 0.7342
+      - 0.5109
+      origin: mutation
+    4,5:
+      cid: c_1851b8af10d40168
+      fitness: 0.61525
+      behavior:
+      - 0.6023
+      - 0.6875
+      origin: mutation
+    7,3:
+      cid: c_0f2cc00ec5ff5664
+      fitness: 0.94979
+      behavior:
+      - 0.916
+      - 0.4065
+      origin: mutation
+    4,6:
+      cid: c_ce342342c975769f
+      fitness: 0.63492
+      behavior:
+      - 0.6216
+      - 0.766
+      origin: mutation
+    3,7:
+      cid: c_daf4340a1a60a1ce
+      fitness: 0.50734
+      behavior:
+      - 0.4967
+      - 0.9609
+      origin: mutation
+    6,4:
+      cid: c_1a0f373540667abc
+      fitness: 0.85924
+      behavior:
+      - 0.8398
+      - 0.5062
+      origin: mutation
+    3,6:
+      cid: c_da370e3ad0711b46
+      fitness: 0.50298
+      behavior:
+      - 0.4939
+      - 0.8222
+      origin: mutation
+    5,5:
+      cid: c_a3b2fa59fb2e6295
+      fitness: 0.75533
+      behavior:
+      - 0.7395
+      - 0.6452
+      origin: mutation
+    7,4:
+      cid: c_f2eeb266d4352c99
+      fitness: 0.89966
+      behavior:
+      - 0.8807
+      - 0.5458
+      origin: dgm
+    6,5:
+      cid: c_e3aa3b188f343282
+      fitness: 0.77115
+      behavior:
+      - 0.755
+      - 0.632
+      origin: mutation
+    5,6:
+      cid: c_9c63e6a39835b6cb
+      fitness: 0.67006
+      behavior:
+      - 0.6608
+      - 0.7639
+      origin: mutation
+seal_training:
+  credit:
+    w_residual: -0.0038
+    w_remaining: -0.0295
+    w_load: -0.0011
+    w_tight: 0.0051
+    new_bin_bias: -0.0003
+  priors:
+    w_residual: 0.9955
+    w_remaining: 0.9646
+    w_load: 0.9987
+    w_tight: 1.0062
+    new_bin_bias: 0.9996
+  n_examples: 108
+half_life:
+  snapshot:
+    state: GREEN
+    capability: 0.89063
+    assurance_credit: 0.42351
+    cumulative_assurance: 0.50076
+    debt: 0.0
+    black_strikes: 0
+  history:
+  - state: GREEN
+    allow: true
+    capability: 0.84747
+    drift: 0.07561
+    required: 0.0378
+    available: 0.2282
+    debt: 0.0
+    reason: drift absorbed by assurance budget
+  - state: GREEN
+    allow: true
+    capability: 0.92081
+    drift: 0.07334
+    required: 0.03667
+    available: 0.19153
+    debt: 0.0
+    reason: drift absorbed by assurance budget
+  - state: GREEN
+    allow: true
+    capability: 0.92636
+    drift: 0.00555
+    required: 0.00277
+    available: 0.18875
+    debt: 0.0
+    reason: drift absorbed by assurance budget
+  adas_designs:
+    conservative:
+      pulls: 3
+      mean: 0.0263
+    balanced:
+      pulls: 3
+      mean: 0.0
+    aggressive:
+      pulls: 2
+      mean: 0.0
+meta_gate_log:
+- action: loosen
+  trigger: promotion_drought
+  fitness_delta_min: 0.0006
+  assurance_growth: 0.5008
+  allowed: true
+scientist_reviews:
+- hypothesis: gene 'w_remaining' is the primary driver of champion fitness
+  champion: c_656f0785b7a2c44d
+  champion_fitness: 0.77335
+  ablation:
+    w_residual: 0.0
+    w_remaining: 0.38555
+    w_load: 0.0
+    w_tight: 0.0
+    new_bin_bias: -0.08101
+  conclusion: "supported (\u0394=+0.3856)"
+  generation: 2
+- hypothesis: gene 'w_remaining' is the primary driver of champion fitness
+  champion: c_656f0785b7a2c44d
+  champion_fitness: 0.77186
+  ablation:
+    w_residual: 0.0
+    w_remaining: 0.34428
+    w_load: 0.0
+    w_tight: 0.0
+    new_bin_bias: -0.08738
+  conclusion: "supported (\u0394=+0.3443)"
+  generation: 4
+- hypothesis: gene 'w_remaining' is the primary driver of champion fitness
+  champion: c_78a48a5ad711b0ab
+  champion_fitness: 0.89804
+  ablation:
+    w_residual: 0.06095
+    w_remaining: 0.39697
+    w_load: 0.12777
+    w_tight: 0.0
+    new_bin_bias: 0.0
+  conclusion: "supported (\u0394=+0.3970)"
+  generation: 6
+- hypothesis: gene 'w_remaining' is the primary driver of champion fitness
+  champion: c_78a48a5ad711b0ab
+  champion_fitness: 0.89063
+  ablation:
+    w_residual: 0.0571
+    w_remaining: 0.35431
+    w_load: 0.11153
+    w_tight: 0.0
+    new_bin_bias: 0.0
+  conclusion: "supported (\u0394=+0.3543)"
+  generation: 8
+lineage_graph:
+  nodes:
+    c_656f0785b7a2c44d:
+      origin: seed
+      fitness: 0.79785
+      gen: 0
+    c_10bba9c0cc33e0c4:
+      origin: alphaevolve+fuse
+      fitness: 0.68266
+      gen: 1
+    c_e6c90450cd60c8c3:
+      origin: alphaevolve+fuse
+      fitness: 0.87896
+      gen: 1
+    c_cfbf878460e5c886:
+      origin: mutation
+      fitness: 0.68864
+      gen: 1
+    c_0296deb039d9da08:
+      origin: mutation
+      fitness: 0.70968
+      gen: 1
+    c_594af19c828e1965:
+      origin: mutation
+      fitness: 0.87896
+      gen: 1
+    c_89bcff18c14a0044:
+      origin: mutation
+      fitness: 0.87896
+      gen: 1
+    c_762c95ad7334dc79:
+      origin: dgm
+      fitness: 0.79785
+      gen: 1
+    c_70b591c422d01508:
+      origin: dgm
+      fitness: 0.87896
+      gen: 1
+    c_fc00c83bebaac95e:
+      origin: dgm
+      fitness: 0.59319
+      gen: 1
+    c_d13693c70fbc2e9a:
+      origin: dgm+self_fuse
+      fitness: 0.79785
+      gen: 1
+    c_f89c31fd08bc8f13:
+      origin: mutation
+      fitness: 0.73265
+      gen: 1
+    c_636d16da85289cfc:
+      origin: mutation
+      fitness: 0.86368
+      gen: 1
+    c_0f2cc00ec5ff5664:
+      origin: mutation
+      fitness: 0.94979
+      gen: 1
+    c_861e6e3d955b4f8f:
+      origin: mutation
+      fitness: 0.81338
+      gen: 2
+    c_d05549610f8d697a:
+      origin: mutation
+      fitness: 0.78115
+      gen: 2
+    c_3b533650951f2606:
+      origin: mutation
+      fitness: 0.89209
+      gen: 2
+    c_435ff5d3f3251c01:
+      origin: mutation
+      fitness: 0.93612
+      gen: 2
+    c_d64bef314c12b560:
+      origin: mutation
+      fitness: 0.51566
+      gen: 2
+    c_ca0e0a59285e4237:
+      origin: mutation
+      fitness: 0.66603
+      gen: 2
+    c_5f3a85086872954a:
+      origin: dgm
+      fitness: 0.83329
+      gen: 2
+    c_9047686d4967d21a:
+      origin: dgm
+      fitness: 0.3878
+      gen: 2
+    c_e76ba11d9ec86536:
+      origin: dgm
+      fitness: 0.68244
+      gen: 2
+    c_c8eb48d5df966a3d:
+      origin: mutation
+      fitness: 0.75554
+      gen: 2
+    c_6225952d1eda98ae:
+      origin: mutation
+      fitness: 0.64194
+      gen: 2
+    c_b83a4604e2070dfa:
+      origin: mutation
+      fitness: 0.85436
+      gen: 2
+    c_59a2b9350d933978:
+      origin: scientist
+      fitness: 0.84405
+      gen: 2
+    c_e04402ceb2bcbc4c:
+      origin: alphaevolve+fuse
+      fitness: 0.48052
+      gen: 3
+    c_0ac8b9d0890f1872:
+      origin: alphaevolve+fuse
+      fitness: 0.92779
+      gen: 3
+    c_6ea14afac218810e:
+      origin: mutation
+      fitness: 0.42071
+      gen: 3
+    c_a94c69d87bebf47d:
+      origin: mutation
+      fitness: 0.69086
+      gen: 3
+    c_85fdd767722229dd:
+      origin: mutation
+      fitness: 0.92779
+      gen: 3
+    c_691f44d4dae56a8c:
+      origin: mutation
+      fitness: 0.82149
+      gen: 3
+    c_91e724167a90c2f6:
+      origin: dgm
+      fitness: 0.69932
+      gen: 3
+    c_a94baefa5275c189:
+      origin: dgm
+      fitness: 0.50009
+      gen: 3
+    c_61b8cc2a62919b3a:
+      origin: dgm
+      fitness: 0.56093
+      gen: 3
+    c_584b884de1263a68:
+      origin: dgm+self_fuse
+      fitness: 0.71172
+      gen: 3
+    c_da370e3ad0711b46:
+      origin: mutation
+      fitness: 0.50298
+      gen: 3
+    c_6d6773dba1d4712c:
+      origin: mutation
+      fitness: 0.7462
+      gen: 3
+    c_9dba5a9b3cc036b2:
+      origin: mutation
+      fitness: 0.6583
+      gen: 3
+    c_ef35eb943d988405:
+      origin: mutation
+      fitness: 0.61439
+      gen: 4
+    c_a58b2b4062e46cd2:
+      origin: mutation
+      fitness: 0.73118
+      gen: 4
+    c_5abda1cd13c646bf:
+      origin: mutation
+      fitness: 0.7408
+      gen: 4
+    c_d90b4a613fd4d287:
+      origin: mutation
+      fitness: 0.68711
+      gen: 4
+    c_033c4294c3d444ff:
+      origin: mutation
+      fitness: 0.84747
+      gen: 4
+    c_ff0e5f50ac3175a0:
+      origin: mutation
+      fitness: 0.68088
+      gen: 4
+    c_e41e7712a6381ceb:
+      origin: dgm
+      fitness: 0.71003
+      gen: 4
+    c_a47b3b33365cfd30:
+      origin: dgm
+      fitness: 0.60603
+      gen: 4
+    c_c2961b1e948f8d9d:
+      origin: dgm
+      fitness: 0.72982
+      gen: 4
+    c_348c81bbd9c95e03:
+      origin: mutation
+      fitness: 0.92081
+      gen: 4
+    c_78a48a5ad711b0ab:
+      origin: mutation
+      fitness: 0.92636
+      gen: 4
+    c_8d0732dcb51998ce:
+      origin: mutation
+      fitness: 0.73834
+      gen: 4
+    c_3753c8a5c56495cb:
+      origin: mutation
+      fitness: 0.42758
+      gen: 5
+    c_579122076b1aed67:
+      origin: mutation
+      fitness: 0.84747
+      gen: 5
+    c_98bb1fce529782d2:
+      origin: mutation
+      fitness: 0.77865
+      gen: 5
+    c_15dd9ceec1a03677:
+      origin: mutation
+      fitness: 0.46301
+      gen: 5
+    c_1a0f373540667abc:
+      origin: mutation
+      fitness: 0.85924
+      gen: 5
+    c_e364dcbddc82b0a6:
+      origin: mutation
+      fitness: 0.64446
+      gen: 5
+    c_196fcd62dab2c2eb:
+      origin: dgm
+      fitness: 0.85924
+      gen: 5
+    c_25d4d3e246a4be70:
+      origin: dgm
+      fitness: 0.85924
+      gen: 5
+    c_012618f40cf3e562:
+      origin: dgm
+      fitness: 0.79738
+      gen: 5
+    c_609d28c871dc98b9:
+      origin: dgm+self_fuse
+      fitness: 0.92636
+      gen: 5
+    c_e2a02275bb6bcf6c:
+      origin: mutation
+      fitness: 0.49824
+      gen: 5
+    c_1851b8af10d40168:
+      origin: mutation
+      fitness: 0.61525
+      gen: 5
+    c_1475402847f49bcc:
+      origin: mutation
+      fitness: 0.85369
+      gen: 5
+    c_d91faf31eca34b61:
+      origin: mutation
+      fitness: 0.72355
+      gen: 6
+    c_4db5408a6b59ef5f:
+      origin: mutation
+      fitness: 0.49763
+      gen: 6
+    c_ce342342c975769f:
+      origin: mutation
+      fitness: 0.63492
+      gen: 6
+    c_daf4340a1a60a1ce:
+      origin: mutation
+      fitness: 0.50734
+      gen: 6
+    c_ad9bb787d1c165db:
+      origin: alphaevolve+fuse
+      fitness: 0.72335
+      gen: 6
+    c_6cd82eceac35bb13:
+      origin: alphaevolve+fuse
+      fitness: 0.78847
+      gen: 6
+    c_94e525d489f6d14e:
+      origin: dgm
+      fitness: 0.89804
+      gen: 6
+    c_7f7e0c4872280f9f:
+      origin: dgm
+      fitness: 0.89804
+      gen: 6
+    c_f2eeb266d4352c99:
+      origin: dgm
+      fitness: 0.89966
+      gen: 6
+    c_ce0c3277855c44df:
+      origin: mutation
+      fitness: 0.83709
+      gen: 6
+    c_e3ed874ebd62a73e:
+      origin: mutation
+      fitness: 0.48827
+      gen: 6
+    c_86417073332074c3:
+      origin: mutation
+      fitness: 0.83709
+      gen: 6
+    c_d28592ab6cf65cd9:
+      origin: scientist
+      fitness: 0.83709
+      gen: 6
+    c_9377f98be9f809bb:
+      origin: mutation
+      fitness: 0.8963
+      gen: 7
+    c_e9341ad16b203226:
+      origin: mutation
+      fitness: 0.83709
+      gen: 7
+    c_32094d98e1b4637e:
+      origin: alphaevolve+fuse
+      fitness: 0.72166
+      gen: 7
+    c_762e55508e2fff3e:
+      origin: mutation
+      fitness: 0.89966
+      gen: 7
+    c_42a26274332fee1c:
+      origin: mutation
+      fitness: 0.62985
+      gen: 7
+    c_8167f8b34e509c64:
+      origin: alphaevolve+fuse
+      fitness: 0.83709
+      gen: 7
+    c_ffccf6fdad1601db:
+      origin: dgm
+      fitness: 0.79014
+      gen: 7
+    c_c044032da8555293:
+      origin: dgm
+      fitness: 0.89804
+      gen: 7
+    c_40c0e7e7b40e0a50:
+      origin: dgm
+      fitness: 0.83709
+      gen: 7
+    c_a3b2fa59fb2e6295:
+      origin: mutation
+      fitness: 0.75533
+      gen: 7
+    c_e3aa3b188f343282:
+      origin: mutation
+      fitness: 0.77115
+      gen: 7
+    c_680c981bb023bab0:
+      origin: mutation
+      fitness: 0.83709
+      gen: 7
+    c_895a71cfe4734568:
+      origin: mutation
+      fitness: 0.8309
+      gen: 8
+    c_d6f00b3061bdc984:
+      origin: alphaevolve+fuse
+      fitness: 0.69451
+      gen: 8
+    c_12c4b9d31b0d60d0:
+      origin: alphaevolve+fuse
+      fitness: 0.73151
+      gen: 8
+    c_06189e0c19ec8258:
+      origin: alphaevolve+fuse
+      fitness: 0.73349
+      gen: 8
+    c_9c63e6a39835b6cb:
+      origin: mutation
+      fitness: 0.67006
+      gen: 8
+    c_18d7f2673c54edd1:
+      origin: alphaevolve+fuse
+      fitness: 0.64435
+      gen: 8
+    c_8ffc4155e4783cff:
+      origin: dgm
+      fitness: 0.83353
+      gen: 8
+    c_832ca8f9220fd7d9:
+      origin: dgm
+      fitness: 0.8908
+      gen: 8
+    c_0a1fb26f96f520af:
+      origin: dgm
+      fitness: 0.83353
+      gen: 8
+    c_3385cee80f3dba18:
+      origin: mutation
+      fitness: 0.70696
+      gen: 8
+    c_f9c567259ad08b62:
+      origin: mutation
+      fitness: 0.83353
+      gen: 8
+    c_2761734131a139f5:
+      origin: mutation
+      fitness: 0.89063
+      gen: 8
+  edges:
+  - - c_656f0785b7a2c44d
+    - c_10bba9c0cc33e0c4
+  - - c_656f0785b7a2c44d
+    - c_e6c90450cd60c8c3
+  - - c_656f0785b7a2c44d
+    - c_cfbf878460e5c886
+  - - c_656f0785b7a2c44d
+    - c_0296deb039d9da08
+  - - c_656f0785b7a2c44d
+    - c_0296deb039d9da08
+  - - c_656f0785b7a2c44d
+    - c_594af19c828e1965
+  - - c_656f0785b7a2c44d
+    - c_89bcff18c14a0044
+  - - c_656f0785b7a2c44d
+    - c_762c95ad7334dc79
+  - - c_656f0785b7a2c44d
+    - c_70b591c422d01508
+  - - c_656f0785b7a2c44d
+    - c_fc00c83bebaac95e
+  - - c_656f0785b7a2c44d
+    - c_d13693c70fbc2e9a
+  - - c_656f0785b7a2c44d
+    - c_f89c31fd08bc8f13
+  - - c_656f0785b7a2c44d
+    - c_636d16da85289cfc
+  - - c_656f0785b7a2c44d
+    - c_0f2cc00ec5ff5664
+  - - c_656f0785b7a2c44d
+    - c_0f2cc00ec5ff5664
+  - - c_0f2cc00ec5ff5664
+    - c_861e6e3d955b4f8f
+  - - c_f89c31fd08bc8f13
+    - c_861e6e3d955b4f8f
+  - - c_f89c31fd08bc8f13
+    - c_d05549610f8d697a
+  - - c_0f2cc00ec5ff5664
+    - c_3b533650951f2606
+  - - c_0f2cc00ec5ff5664
+    - c_3b533650951f2606
+  - - c_0f2cc00ec5ff5664
+    - c_435ff5d3f3251c01
+  - - c_0f2cc00ec5ff5664
+    - c_435ff5d3f3251c01
+  - - c_fc00c83bebaac95e
+    - c_d64bef314c12b560
+  - - c_e6c90450cd60c8c3
+    - c_ca0e0a59285e4237
+  - - c_e6c90450cd60c8c3
+    - c_ca0e0a59285e4237
+  - - c_656f0785b7a2c44d
+    - c_5f3a85086872954a
+  - - c_656f0785b7a2c44d
+    - c_9047686d4967d21a
+  - - c_656f0785b7a2c44d
+    - c_e76ba11d9ec86536
+  - - c_f89c31fd08bc8f13
+    - c_c8eb48d5df966a3d
+  - - c_e6c90450cd60c8c3
+    - c_6225952d1eda98ae
+  - - c_0f2cc00ec5ff5664
+    - c_6225952d1eda98ae
+  - - c_e6c90450cd60c8c3
+    - c_b83a4604e2070dfa
+  - - c_0f2cc00ec5ff5664
+    - c_b83a4604e2070dfa
+  - - c_656f0785b7a2c44d
+    - c_59a2b9350d933978
+  - - c_3b533650951f2606
+    - c_e04402ceb2bcbc4c
+  - - c_0f2cc00ec5ff5664
+    - c_0ac8b9d0890f1872
+  - - c_3b533650951f2606
+    - c_0ac8b9d0890f1872
+  - - c_c8eb48d5df966a3d
+    - c_6ea14afac218810e
+  - - c_0f2cc00ec5ff5664
+    - c_a94c69d87bebf47d
+  - - c_3b533650951f2606
+    - c_85fdd767722229dd
+  - - c_3b533650951f2606
+    - c_85fdd767722229dd
+  - - c_3b533650951f2606
+    - c_691f44d4dae56a8c
+  - - c_0f2cc00ec5ff5664
+    - c_691f44d4dae56a8c
+  - - c_656f0785b7a2c44d
+    - c_91e724167a90c2f6
+  - - c_656f0785b7a2c44d
+    - c_a94baefa5275c189
+  - - c_656f0785b7a2c44d
+    - c_61b8cc2a62919b3a
+  - - c_656f0785b7a2c44d
+    - c_584b884de1263a68
+  - - c_0f2cc00ec5ff5664
+    - c_da370e3ad0711b46
+  - - c_3b533650951f2606
+    - c_6d6773dba1d4712c
+  - - c_3b533650951f2606
+    - c_6d6773dba1d4712c
+  - - c_3b533650951f2606
+    - c_9dba5a9b3cc036b2
+  - - c_c8eb48d5df966a3d
+    - c_ef35eb943d988405
+  - - c_c8eb48d5df966a3d
+    - c_a58b2b4062e46cd2
+  - - c_0f2cc00ec5ff5664
+    - c_5abda1cd13c646bf
+  - - c_c8eb48d5df966a3d
+    - c_5abda1cd13c646bf
+  - - c_c8eb48d5df966a3d
+    - c_d90b4a613fd4d287
+  - - c_0f2cc00ec5ff5664
+    - c_d90b4a613fd4d287
+  - - c_c8eb48d5df966a3d
+    - c_033c4294c3d444ff
+  - - c_0f2cc00ec5ff5664
+    - c_033c4294c3d444ff
+  - - c_0f2cc00ec5ff5664
+    - c_ff0e5f50ac3175a0
+  - - c_656f0785b7a2c44d
+    - c_e41e7712a6381ceb
+  - - c_656f0785b7a2c44d
+    - c_a47b3b33365cfd30
+  - - c_656f0785b7a2c44d
+    - c_c2961b1e948f8d9d
+  - - c_3b533650951f2606
+    - c_348c81bbd9c95e03
+  - - c_0f2cc00ec5ff5664
+    - c_348c81bbd9c95e03
+  - - c_0f2cc00ec5ff5664
+    - c_78a48a5ad711b0ab
+  - - c_c8eb48d5df966a3d
+    - c_8d0732dcb51998ce
+  - - c_d64bef314c12b560
+    - c_3753c8a5c56495cb
+  - - c_ef35eb943d988405
+    - c_3753c8a5c56495cb
+  - - c_033c4294c3d444ff
+    - c_579122076b1aed67
+  - - c_ef35eb943d988405
+    - c_98bb1fce529782d2
+  - - c_033c4294c3d444ff
+    - c_98bb1fce529782d2
+  - - c_da370e3ad0711b46
+    - c_15dd9ceec1a03677
+  - - c_d64bef314c12b560
+    - c_15dd9ceec1a03677
+  - - c_da370e3ad0711b46
+    - c_1a0f373540667abc
+  - - c_033c4294c3d444ff
+    - c_1a0f373540667abc
+  - - c_ef35eb943d988405
+    - c_e364dcbddc82b0a6
+  - - c_78a48a5ad711b0ab
+    - c_196fcd62dab2c2eb
+  - - c_78a48a5ad711b0ab
+    - c_25d4d3e246a4be70
+  - - c_78a48a5ad711b0ab
+    - c_012618f40cf3e562
+  - - c_78a48a5ad711b0ab
+    - c_609d28c871dc98b9
+  - - c_da370e3ad0711b46
+    - c_e2a02275bb6bcf6c
+  - - c_ef35eb943d988405
+    - c_1851b8af10d40168
+  - - c_da370e3ad0711b46
+    - c_1851b8af10d40168
+  - - c_033c4294c3d444ff
+    - c_1475402847f49bcc
+  - - c_d90b4a613fd4d287
+    - c_d91faf31eca34b61
+  - - c_3b533650951f2606
+    - c_d91faf31eca34b61
+  - - c_1a0f373540667abc
+    - c_4db5408a6b59ef5f
+  - - c_1851b8af10d40168
+    - c_ce342342c975769f
+  - - c_d90b4a613fd4d287
+    - c_ce342342c975769f
+  - - c_1a0f373540667abc
+    - c_daf4340a1a60a1ce
+  - - c_1851b8af10d40168
+    - c_daf4340a1a60a1ce
+  - - c_d90b4a613fd4d287
+    - c_ad9bb787d1c165db
+  - - c_d90b4a613fd4d287
+    - c_6cd82eceac35bb13
+  - - c_1a0f373540667abc
+    - c_6cd82eceac35bb13
+  - - c_78a48a5ad711b0ab
+    - c_94e525d489f6d14e
+  - - c_78a48a5ad711b0ab
+    - c_7f7e0c4872280f9f
+  - - c_78a48a5ad711b0ab
+    - c_f2eeb266d4352c99
+  - - c_3b533650951f2606
+    - c_ce0c3277855c44df
+  - - c_d90b4a613fd4d287
+    - c_ce0c3277855c44df
+  - - c_1a0f373540667abc
+    - c_e3ed874ebd62a73e
+  - - c_1851b8af10d40168
+    - c_e3ed874ebd62a73e
+  - - c_1851b8af10d40168
+    - c_86417073332074c3
+  - - c_78a48a5ad711b0ab
+    - c_d28592ab6cf65cd9
+  - - c_f2eeb266d4352c99
+    - c_9377f98be9f809bb
+  - - c_f2eeb266d4352c99
+    - c_e9341ad16b203226
+  - - c_c8eb48d5df966a3d
+    - c_e9341ad16b203226
+  - - c_0f2cc00ec5ff5664
+    - c_32094d98e1b4637e
+  - - c_f2eeb266d4352c99
+    - c_762e55508e2fff3e
+  - - c_da370e3ad0711b46
+    - c_42a26274332fee1c
+  - - c_f2eeb266d4352c99
+    - c_8167f8b34e509c64
+  - - c_78a48a5ad711b0ab
+    - c_ffccf6fdad1601db
+  - - c_78a48a5ad711b0ab
+    - c_c044032da8555293
+  - - c_78a48a5ad711b0ab
+    - c_40c0e7e7b40e0a50
+  - - c_0f2cc00ec5ff5664
+    - c_a3b2fa59fb2e6295
+  - - c_da370e3ad0711b46
+    - c_a3b2fa59fb2e6295
+  - - c_c8eb48d5df966a3d
+    - c_e3aa3b188f343282
+  - - c_0f2cc00ec5ff5664
+    - c_680c981bb023bab0
+  - - c_0f2cc00ec5ff5664
+    - c_680c981bb023bab0
+  - - c_3b533650951f2606
+    - c_895a71cfe4734568
+  - - c_c8eb48d5df966a3d
+    - c_895a71cfe4734568
+  - - c_ce342342c975769f
+    - c_d6f00b3061bdc984
+  - - c_1851b8af10d40168
+    - c_12c4b9d31b0d60d0
+  - - c_3b533650951f2606
+    - c_06189e0c19ec8258
+  - - c_1851b8af10d40168
+    - c_9c63e6a39835b6cb
+  - - c_1851b8af10d40168
+    - c_18d7f2673c54edd1
+  - - c_ce342342c975769f
+    - c_18d7f2673c54edd1
+  - - c_78a48a5ad711b0ab
+    - c_8ffc4155e4783cff
+  - - c_78a48a5ad711b0ab
+    - c_832ca8f9220fd7d9
+  - - c_78a48a5ad711b0ab
+    - c_0a1fb26f96f520af
+  - - c_1851b8af10d40168
+    - c_3385cee80f3dba18
+  - - c_1a0f373540667abc
+    - c_f9c567259ad08b62
+  - - c_3b533650951f2606
+    - c_2761734131a139f5
+  - - c_c8eb48d5df966a3d
+    - c_2761734131a139f5
