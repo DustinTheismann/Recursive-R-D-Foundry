@@ -5,7 +5,7 @@ PY ?= python3
 export PYTHONPATH := .:vendor
 
 .DEFAULT_GOAL := help
-.PHONY: help test demo demo-gate audit verify clean
+.PHONY: help test demo demo-gate audit verify experiments-smoke clean
 
 help: ## show this help
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | \
@@ -22,6 +22,10 @@ demo-gate: ## deterministic gate demonstration (honest->PROMOTED, goodhart->REFU
 
 audit: ## run the vendored kernel's overclaim scanner on this repo's prose
 	$(PY) -m fek --root . scan-overclaims
+
+experiments-smoke: ## validate experiment APPARATUS runs (NOT a result run; see experiments/)
+	$(PY) experiments/adaptive_adversary/attack_harness.py --smoke
+	$(PY) experiments/trait_quarantine/harness.py --smoke
 
 verify: test demo demo-gate audit ## full cold gate: both halves witnessed two ways
 	@echo "verify: OK (test + governed demo + gate demo + audit, all cold)"

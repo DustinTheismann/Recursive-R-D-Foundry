@@ -44,11 +44,16 @@ PROBE_HARNESS_ID = "probe-harness"
 REVIEW_HARNESS_ID = "review-harness"
 
 
-def evaluate_candidate(kernel: Kernel, name: str, agent: Agent) -> dict[str, Any]:
-    """Run both surfaces, file the claim + evidence, refute on probe failure."""
+def evaluate_candidate(kernel: Kernel, name: str, agent: Agent, probe_seed: int | None = None) -> dict[str, Any]:
+    """Run both surfaces, file the claim + evidence, refute on probe failure.
+
+    ``probe_seed`` selects the held-out probe set; ``None`` uses the default
+    seed. Supplying a per-round seed (e.g. for the adaptive-adversary harness)
+    keeps the held-out set unpredictable to candidates frozen before the draw.
+    """
 
     public = run_public(agent)
-    probe = run_probe(agent)
+    probe = run_probe(agent) if probe_seed is None else run_probe(agent, seed=probe_seed)
 
     evidence: list[dict[str, Any]] = []
     if perfect(public):
