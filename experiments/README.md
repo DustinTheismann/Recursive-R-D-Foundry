@@ -27,8 +27,27 @@ one the rest of the repo enforces on code, applied to claims:
 
 | dir | move | claim | status |
 |-----|------|-------|--------|
-| `trait_quarantine/` | 2 | quarantined-trait recombination reaches honest improvement faster than discard, without raising false-promotion rate | registered; apparatus built, smoke-validated; **run pending cold session** |
-| `adaptive_adversary/` | 1 | the evidence gate holds against candidates that optimize against the gate itself (gate-aware attack) | registered; deterministic attack battery built + runnable; LLM arm is a seam, **run pending cold session** |
+| `trait_quarantine/` | 2 | quarantined-trait recombination reaches honest improvement faster than discard, without raising false-promotion rate | **prereg v1.1** (amended pre-data after the §7 audit returned HOLD); apparatus fixed + smoke-validated; **re-audit + registered run pending cold session** (RUNBOOK.md) |
+| `adaptive_adversary/` | 1 | the evidence gate holds against candidates that optimize against the gate itself (gate-aware attack) | registered; deterministic battery runnable; LLM arm is a seam, **run pending cold session** (RUNBOOK.md) |
+
+## Apparatus runs ≠ apparatus measures (a finding in its own right)
+
+This experiment has been saved twice, both times by checks `make verify` cannot
+perform — green CI, broken inference:
+
+1. **The liveness check** caught a rig that *couldn't promote*: the champion was
+   frozen at the seed, every capability drift overwhelmed the HALF-LIFE budget,
+   and all three arms would have "measured" a tie that was a deadlocked rig.
+2. **The §7 faithfulness audit** (independent, cold) caught a rig that *would
+   have promoted the wrong conclusion*: a budget leak granting GATED free compute
+   proportional to its refutation count — indistinguishable, in a favorable
+   result, from the hypothesis being true — plus a trait-bandwidth asymmetry
+   confounding policy with bandwidth. Both fixed pre-data in v1.1; budget
+   conservation is now enforced in code, not by review.
+
+The lesson, twice demonstrated in one experiment: a test suite proves the
+apparatus *executes*; only liveness checks and adversarial faithfulness audits
+prove it *measures*. This paragraph belongs in any eventual writeup.
 
 Moves 3 (real in-the-wild reward hacks) and 4 (the benchmark/leaderboard) grow
 from whichever of 1–2 survives its cold run.
