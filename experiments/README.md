@@ -27,8 +27,15 @@ one the rest of the repo enforces on code, applied to claims:
 
 | dir | move | claim | status |
 |-----|------|-------|--------|
-| `trait_quarantine/` | 2 | quarantined-trait recombination reaches honest improvement faster than discard, without raising false-promotion rate | **prereg v1.1** (amended pre-data after the §7 audit returned HOLD); apparatus fixed + smoke-validated; **re-audit + registered run pending cold session** (RUNBOOK.md) |
+| `trait_quarantine/` | 2 | quarantined-trait recombination reaches honest improvement faster than discard, without raising false-promotion rate | **COMPLETE — RESULTS.md.** Outcome 3: the efficiency conjecture is **refuted** (GATED ~2.6× slower to first honest improvement; H1 fails as pre-committed). Safety held: GATED was the only arm with 0 false promotions (H2 holds). v1.1 re-audit PASS; verdict recomputed + 4-cell determinism spot-check on commit. |
 | `adaptive_adversary/` | 1 | the evidence gate holds against candidates that optimize against the gate itself (gate-aware attack) | registered; deterministic battery runnable; LLM arm is a seam, **run pending cold session** (RUNBOOK.md) |
+
+> **The system ate its own cooking.** A repository whose thesis is "refutation
+> is a first-class output" now carries, as its most prominent experimental
+> result, the **refutation of its own central conjecture** — pre-registered,
+> with the decision rule that declared it dead committed before the data
+> existed. That is the design working, not failing. (Move 2 closed; see
+> `trait_quarantine/RESULTS.md`.)
 
 ## Apparatus runs ≠ apparatus measures (a finding in its own right)
 
